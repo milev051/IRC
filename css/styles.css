@@ -93,12 +93,17 @@
 
 .project-item {
     overflow: hidden;
+    box-shadow: 0px 0px 0px 0px #FC5185;
+    transition: box-shadow 0.2s linear;
+    /* transition: outline-offset 0.2s linear; */
+    border-radius: .5rem;
 }
 
 .project-image {
     object-fit: cover;
     vertical-align: middle;
     width: 24rem;
+    border-radius: .5rem;
 }
 
 .project-title {
@@ -107,8 +112,8 @@
 
 .project-item:hover {
     cursor: pointer;
-    transform: rotate(0.5deg) scale(1.01);
-    transition: transform 0.1s ease-in-out;
+    box-shadow: 0px 0px 0px 3px #ff00f2;
+    /* outline-offset: -3px #ff00f2; */
 }
 
 /* main-team-container */
@@ -152,6 +157,46 @@
 .team-title {}
 
 .team-paragraph {}
+
+/* popup */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* display: none; */
+}
+
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-popup-button {
+    margin: 0.5rem;
+}
+
+.close-popup-button:hover {
+    cursor: pointer;
+}
 
 /* footer */
 footer {}
