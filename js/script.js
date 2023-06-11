@@ -7,7 +7,7 @@ function handleImageClick(imageElement) {
     var popupContent = document.createElement("div");
     popupContent.className = "popup-content";
     popupContent.innerHTML = `
-        <img src="${imageUrl}" alt="${imageAlt}" class="popup-image">
+        <img src="${imageUrl}" alt="${imageAlt}" class="popup-info">
         <h3>${imageAlt}</h3>
     `;
 
@@ -28,7 +28,7 @@ function handleImageClick(imageElement) {
 }
 
 function handlePopupImages() {
-    var popupImages = document.querySelectorAll(".popup-image");
+    var popupImages = document.querySelectorAll(".popup-info");
 
     popupImages.forEach(function (image) {
         image.addEventListener("click", function () {
