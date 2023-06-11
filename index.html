@@ -8,7 +8,7 @@
 
 <body>
 
-    <div id="popup" class="popup-overlay">
+    <!-- <div id="popup" class="popup-overlay">
         <div class="popup-container">
             <div class="popup-content">
                 <div class="popup-title">
@@ -18,7 +18,7 @@
                 <p>This is a popup.</p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <header>
         <nav class="navbar">
@@ -74,72 +74,83 @@
         <h2 class="section-title">Projekti</h2>
         <div class="project-container standard-flex-container">
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item" onclick="showPopup()">
                 <img class="project-image" src="img/project-01.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
+                <div id="popup" class="popup-overlay" style="display: none;">
+                    <div class="popup-container">
+                        <div class="popup-content">
+                            <div class="popup-title">
+                                <h1>Popup Content</h1>
+                                <p class="close-popup-button" onclick="hidePopup()">X</p>
+                            </div>
+                            <p>This is a popup.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-02.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-03.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-04.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-05.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-06.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-07.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-08.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-09.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-10.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-11.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-12.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-13.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>
 
-            <div class="project-item standard-item standard-item" class="popup-info">
+            <div class="project-item standard-item standard-item">
                 <img class="project-image" src="img/project-14.jpg">
                 <h3 class="project-title standard-item-title">Title 1</h3>
             </div>

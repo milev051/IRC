@@ -93,7 +93,6 @@
 
 .project-item {
     overflow: hidden;
-    box-shadow: 0px 0px 0px 0px #FC5185;
     transition: box-shadow 0.2s linear;
     /* transition: outline-offset 0.2s linear; */
     border-radius: .5rem;
@@ -112,7 +111,7 @@
 
 .project-item:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 0px 3px #ff00f2;
+    box-shadow: 0px 0px 0px 3px #00d9ff;
     /* outline-offset: -3px #ff00f2; */
 }
 
