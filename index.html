@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 
 <head>
     <title>IRC</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
@@ -21,62 +23,37 @@
     </div> -->
 
     <header>
-        <nav class="navbar">
-            <div class="hamburger"></div>
+        <section class="navbar">
+            <div>
+                <img class="icon-irc-white" src="img/icon-irc-white.png" alt="">
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
             <ul class="menu">
-                <li><a href="#hero">Hero</a></li>
-                <li><a href="#flex-section1">Flex Section 1</a></li>
-                <li><a href="#flex-section2">Flex Section 2</a></li>
+                <li><a href="#project-section">Realizovani projekti</a></li>
+                <li><a href="#main-team-section">Tim</a></li>
+                <li><a href="#section-zahvalnost">Zahvalnost profesorima</a></li>
+                <li><a href="#section-partneri">Partneri</a></li>
             </ul>
-        </nav>
+        </section>
     </header>
 
-    <section id="hero" class="big-section-gap">
+    <section id="hero">
         <div class="hero-content">
-            <img class="hero-image" src="img/hero.jpg">
+            <img class="metric" src="img/metric.png" alt="">
         </div>
     </section>
 
-    <section id="metric" class="big-section-gap">
-        <h2 class="section-title">Dostignuca</h2>
-        <div class="metric-container standard-flex-container">
+    <section id="project-section">
+        <h3 class="section-subtitle">REALIZOVANI</h3>
+        <h2 class="section-title">Projekti u školskoj 2022/23. godini</h2>
+        <div class="project-container">
 
-            <div class="metric-item standard-item standard-item">
-                <img class="metric-item-image" src="img/metric-project.png" alt="">
-                <h3 class="metric-item-title standard-item-title">50</h3>
-                <p class="metric-item-paragraph standard-item-paragraph">Projekata</p>
-            </div>
-            <div class="metric-item standard-item standard-item">
-                <img class="metric-item-image" src="img/metric-student.png" alt="">
-                <h3 class="metric-item-title standard-item-title">50</h3>
-                <p class="metric-item-paragraph standard-item-paragraph">Studenata</p>
-            </div>
-            <div class="metric-item standard-item standard-item">
-                <img class="metric-item-image" src="img/metric-professor.png" alt="">
-                <h3 class="metric-item-title standard-item-title">50</h3>
-                <p class="metric-item-paragraph standard-item-paragraph">Nastavnika</p>
-            </div>
-            <div class="metric-item standard-item standard-item">
-                <img class="metric-item-image" src="img/metric-partner.png" alt="">
-                <h3 class="metric-item-title standard-item-title">50</h3>
-                <p class="metric-item-paragraph standard-item-paragraph">Partnera</p>
-            </div>
-            <div class="metric-item standard-item standard-item">
-                <img class="metric-item-image" src="img/metric-professor-volunteer.png" alt="">
-                <h3 class="metric-item-title standard-item-title">50</h3>
-                <p class="metric-item-paragraph standard-item-paragraph">Nastavnika ukljuèenih u aktivnosti</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="project-section" class="big-section-gap">
-        <h2 class="section-title">Projekti</h2>
-        <div class="project-container standard-flex-container">
-
-            <div class="project-item standard-item standard-item" onclick="showPopup()">
-                <img class="project-image" src="img/project-01.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/01.jpg">
+                <h3 class="project-title">RénovationRetail Case Challenge</h3>
                 <div id="popup" class="popup-overlay" style="display: none;">
                     <div class="popup-container">
                         <div class="popup-content">
@@ -90,176 +67,259 @@
                 </div>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-02.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/02.jpg">
+                <h3 class="project-title">RénovationRetail Case Challenge</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-03.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/03.jpg">
+                <h3 class="project-title">ERP Academy</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-04.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/04.jpg">
+                <h3 class="project-title">Florence Days</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-05.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/05.jpg">
+                <h3 class="project-title">Route2Launch</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-06.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/06.jpg">
+                <h3 class="project-title">Nedelja studentskih ideja</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-07.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/07.jpg">
+                <h3 class="project-title">Expert2Mentors #2</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-08.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/08.jpg">
+                <h3 class="project-title">Skyrocket Account
+                    Management Academy</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-09.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/09.jpg">
+                <h3 class="project-title">Gde žive podaci</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-10.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/10.jpg">
+                <h3 class="project-title">Endava Project Management
+                    Training Program</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-11.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/11.jpg">
+                <h3 class="project-title">Open Data takmièenje</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-12.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/12.jpg">
+                <h3 class="project-title">Humanitarni projekat: Empower IT</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-13.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/13.jpg">
+                <h3 class="project-title">Florence Days</h3>
             </div>
 
-            <div class="project-item standard-item standard-item">
-                <img class="project-image" src="img/project-14.jpg">
-                <h3 class="project-title standard-item-title">Title 1</h3>
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/14.jpg">
+                <h3 class="project-title">OTP Youth Hub</h3>
+            </div>
+
+            <div class="project-item">
+                <img class="project-image" src="img/Projects/09.jpg">
+                <h3 class="project-title">Gde žive podaci</h3>
             </div>
 
         </div>
     </section>
 
-    <section id="main-team-section" class="small-section-gap">
+    <section id="main-team-section">
+        <h3 class="section-subtitle">IRC</h3>
         <h2 class="section-title">Tim</h2>
+        <div class="main-team-container">
 
-        <div class="main-team-container standard-flex-container">
-
-            <div class="main-team-item standard-item">
-                <img class="main-team-image" src="img/hero.jpg">
-                <h3 class="main-team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="main-team-paragraph standard-item-paragraph">(student IV godine)</p>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-item-description">
+                    <h3 class="main-team-title">Ana Milièeviæ</h3>
+                    <p class="main-team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
             </div>
 
-            <div class="main-team-item standard-item">
-                <img class="main-team-image" src="img/hero.jpg">
-                <h3 class="main-team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="main-team-paragraph standard-item-paragraph">(student IV godine)</p>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-item-description">
+                    <h3 class="main-team-title">Marija Vitaz</h3>
+                    <p class="main-team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
             </div>
 
-            <div class="main-team-item standard-item">
-                <img class="main-team-image" src="img/hero.jpg">
-                <h3 class="main-team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="main-team-paragraph standard-item-paragraph">(student IV godine)</p>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-item-description">
+                    <h3 class="main-team-title">Tamara Ðeriæ</h3>
+                    <p class="main-team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="basic-team-section" class="big-section-gap">
-        <div class="team-container standard-flex-container">
+    <section id="team-section">
+        <div class="team-container">
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Marko Saviæeviæ</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Marko Milev</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Aleksa Ðuriæ</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Milica</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Anðela</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Staša Piletiæ</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Iva</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Miljan Terziæ</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Ivona</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Jovana</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Jovana</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-item-description">
+                    <h3 class="team-title">Sara Damljanoviæ</h3>
+                    <p class="team-paragraph">STUDENT MASTER STUDIJA</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
-            <div class="team-item standard-item">
-                <img class="team-image" src="img/hero.jpg">
-                <h3 class="team-title standard-item-title">Aleksandar Stankoviæ</h3>
-                <p class="team-paragraph standard-item-paragraph">(student IV godine)</p>
-            </div>
+    <section id="section-zahvalnost">
+        <h3 class="section-subtitle">ZAHVALNOST</h3>
+        <h2 class="section-title">Lista angažovanih nastavnika i saradnika sa FON-a</h2>
+        <p class="zahvalnost-paragraf">Aleksandar Ðokoviæ <b>•</b> Aleksandar Rakiæeviæ <b>•</b> Ana Poledica <b>•</b>
+            Andrea Nikoliæ <b>•</b> Anðelija Ðorðeviæ <b>•</b> Biljana
+            Cvetiæ <b>•</b> Boris Delibašiæ <b>•</b> Branka Novèiæ Koraæ <b>•</b> Bratislav Petroviæ <b>•</b> Dragan
+            Ristoviæ <b>•</b> Dragana Stojanoviæ <b>•</b>
+            Dragan Vukmiroviæ <b>•</b> Dušan Baraæ <b>•</b> Dušan Mitroviæ <b>•</b> Ðorðe Krivokapiæ <b>•</b> Ivan
+            Lukoviæ <b>•</b> Ivan Todoroviæ <b>•</b> Ivan
+            Tomaševiæ <b>•</b> Jasna Petkoviæ <b>•</b> Jelena Andreja Radakoviæ <b>•</b> Jelena Anðelkoviæ Labroviæ
+            <b>•</b> Jelica Stanojeviæ <b>•</b>
+            Jovana Rakiæeviæ <b>•</b> Lena Ðorðeviæ Milutinoviæ <b>•</b> Marija Joviæ <b>•</b> Marko Æiroviæ <b>•</b>
+            Milan Okanoviæ <b>•</b> Milan
+            Radojièiæ <b>•</b> Milica Jovanoviæ <b>•</b> Milica Simiæ <b>•</b> Miloš Jovanoviæ <b>•</b> Miloš
+            Milosavljeviæ <b>•</b> Miloš Parežanin <b>•</b>
+            Mladen Èudanov <b>•</b> Nataša Petroviæ <b>•</b> Nemanja Milanoviæ <b>•</b> Nemanja Milenkoviæ <b>•</b>
+            Ognjen Anðeliæ <b>•</b> Ognjen Nikoliæ
+            <b>•</b> Pavle Miloševiæ <b>•</b> Petar Lukovac <b>•</b> Petar Stanimiroviæ <b>•</b> Radul Milutinoviæ
+            <b>•</b> Sanja Marinkoviæ <b>•</b> Siniša
+            Vlajiæ <b>•</b> Slaðana Barjaktaroviæ Rakoèeviæ <b>•</b> Slavica Cicvariæ Kostiæ <b>•</b> Svetlana Jovanoviæ
+            <b>•</b> Tamara Naumoviæ <b>•</b>
+            Tea Borozan <b>•</b> Teodora Rajkoviæ <b>•</b> Uroš Šoševiæ <b>•</b> Vladan Devedžiæ <b>•</b> Zoran
+            Radojièiæ <b>•</b> Zoran Rakiæeviæ
+        </p>
+    </section>
 
+    <section id="section-partneri">
+        <h3 class="section-subtitle">UPOZNAJTE</h3>
+        <h2 class="section-title">Partnere</h2>
+        <div class="parner-gallery">
+            <img src="img/Partners/01.png" alt="">
+            <img src="img/Partners/02.png" alt="">
+            <img src="img/Partners/03.png" alt="">
+            <img src="img/Partners/04.png" alt="">
+            <img src="img/Partners/05.png" alt="">
+            <img src="img/Partners/06.png" alt="">
+            <img src="img/Partners/07.png" alt="">
+            <img src="img/Partners/08.png" alt="">
+            <img src="img/Partners/09.png" alt="">
+            <img src="img/Partners/10.png" alt="">
+            <img src="img/Partners/11.png" alt="">
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <p class="footer-paragraph">Copyright © 2023 IRC FON</p>
+        <div class="footer-section-1">
+            <img class="icon-irc" src="img/icon-irc.png" alt="">
             <div class="social-icons">
                 <a href="https://www.instagram.com/ircfon/"><img class="social-icon" src="img/icon-instagram.png"></a>
                 <a href="https://www.linkedin.com/company/ircfon/"><img class="social-icon"
                         src="img/icon-linkedin.png"></a>
                 <a href="https://www.facebook.com/ircFON/"><img class="social-icon" src="img/icon-facebook.png"></a>
             </div>
+        </div>
+        <hr>
+        <div class="footer-section-2">
+            <p class="footer-paragraph">© 2023 Istraživaèko-razvojni centar FON</p>
         </div>
     </footer>
 
