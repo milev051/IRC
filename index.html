@@ -2,8 +2,10 @@
 <html lang="sr">
 
 <head>
-    <title>IRC</title>
+    <title>IRC FON</title>
+    <link rel="icon" href="img/logo-page.png">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -23,27 +25,25 @@
     </div> -->
 
     <header>
-        <section class="navbar">
-            <div>
-                <img class="icon-irc-white" src="img/icon-irc-white.png" alt="">
+        <nav>
+            <a href="">
+                <img class="logo" src="img/icon-irc-white.png" alt="">
+            </a>
+            <div id="menu">
+                <a href="#project-section">Realizovani projekti</a>
+                <a href="#main-team-section">Tim</a>
+                <a href="#section-zahvalnost">Zahvalnost profesorima</a>
+                <a href="#section-partneri">Partneri</a>
             </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="#project-section">Realizovani projekti</a></li>
-                <li><a href="#main-team-section">Tim</a></li>
-                <li><a href="#section-zahvalnost">Zahvalnost profesorima</a></li>
-                <li><a href="#section-partneri">Partneri</a></li>
-            </ul>
-        </section>
+            <img class="hamburger" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
+            </a>
+        </nav>
     </header>
 
     <section id="hero">
-        <div class="hero-content">
-            <img class="metric" src="img/metric.png" alt="">
-        </div>
+        <h2 class="hero-title">IRC Digitalni bilten</h2>
+        <h3 class="hero-subtitle">Rezultati aktivnosti u školskoj 2022/23. godini</h3>
+        <img class="metric" src="img/metric.png" alt="">
     </section>
 
     <section id="project-section">

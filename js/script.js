@@ -15,3 +15,15 @@ function hidePopup() {
   popup.style.display = "none";
 }
 
+// HAMBURGER MENU
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
+}
