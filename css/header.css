@@ -1,41 +1,44 @@
 /* HEADER */
 
 header {
-    float: left;
+  float: left;
+  width: 100%;
 
-    width: 100%;
-}
+  .logo {
+    z-index: 7;
 
-nav {
+    width: 12.5rem;
+  }
+
+  & nav {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
 
     padding: 1.25rem 8.5%;
-}
 
-#menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    #menu {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
 
-    gap: 2rem;
+      gap: 2rem;
 
-    & a {
+      & a {
         font-size: 1rem;
         font-weight: 400;
 
-        color: #ffffffCC;
-    }
+        color: #ffffffcc;
+      }
 
-    & a:hover {
+      & a:hover {
         color: white;
         text-shadow: 0 0 20px #fff;
-    }
+      }
 
-    @media(max-aspect-ratio: 18/16) {
+      @media (max-aspect-ratio: 18/16) {
         position: absolute;
         z-index: 5;
         top: 0px;
@@ -49,24 +52,20 @@ nav {
         justify-content: center;
 
         background-color: var(--Dark);
+      }
     }
-}
+  }
 
-.logo {
-    z-index: 7;
-
-    width: 12.5rem;
-}
-
-.hamburger {
+  .hamburger {
     z-index: 6;
 
     display: none;
 
-    @media(max-aspect-ratio: 18/16) {
-        display: flex;
+    @media (max-aspect-ratio: 18/16) {
+      display: flex;
 
-        width: 1.25rem;
-        height: 1rem;
+      width: 1.25rem;
+      height: 1rem;
     }
+  }
 }
