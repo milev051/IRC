@@ -113,20 +113,30 @@ h2 {
 #project-section {
   margin-top: 40px;
 
+  @media (max-aspect-ratio: 1) {
+    padding: 0;
+  }
+
   .container {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     row-gap: 40px;
     column-gap: 40px;
+
+    @media (min-aspect-ratio: 1) {
+      column-gap: 20px;
+    }
 
     .item {
       display: flex;
       overflow: hidden;
       flex-direction: column;
-      width: 330px;
-      height: 320px;
+      justify-content: center;
+      align-items: center;
+      width: 435px;
+      height: 425px;
       padding: 15px;
       padding-bottom: 5px;
       transition: box-shadow 0.5s linear;
@@ -153,6 +163,11 @@ h2 {
         vertical-align: middle;
         border-radius: 10px;
         object-fit: cover;
+
+        @media (min-aspect-ratio: 1) {
+          width: 400px;
+          height: 280px;
+        }
       }
 
       & h3 {
@@ -193,10 +208,10 @@ h2 {
     .item {
       display: flex;
       flex-direction: column;
+      justify-items: center;
       width: 330px;
       height: 410px;
       background-color: white;
-      justify-items: center;
 
       @media (max-aspect-ratio: 1) {
         width: 115px;
@@ -210,7 +225,7 @@ h2 {
 
         @media (max-aspect-ratio: 1) {
           width: 115px;
-          height: 80.91px;
+          height: 90.91px;
         }
       }
 
@@ -222,8 +237,6 @@ h2 {
         justify-content: center;
 
         @media (max-aspect-ratio: 1) {
-          width: 115px;
-          height: 45.59px;
         }
 
         & h3 {
