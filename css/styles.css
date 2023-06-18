@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 :root {
   --Light: #1ebcef;
   --Dark: #082234;
@@ -8,13 +6,16 @@
 }
 
 * {
-  -webkit-tap-highlight-color: transparent;
+  font-family: "Inter", sans-serif;
+
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  text-align: center;
-  font-family: "Inter", sans-serif;
+
   transition: 0.25s ease-out;
+  text-align: center;
+
+  -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
 
@@ -40,46 +41,54 @@ html {
 
 h1 {
   font-size: 32px;
+
   padding-bottom: 40px;
+
+  text-align: center;
 }
 
 h2 {
-  color: var(--Light);
   font-size: 18px;
+
   margin-bottom: 12px;
+
+  text-align: center;
   letter-spacing: 3.2px;
+
+  color: var(--Light);
 }
 
 #hero {
-  background-color: var(--Light);
-  background-position: center;
   width: 100%;
   height: 844px;
 
+  background-color: var(--Light);
+  background-position: center;
+
   .hero-text {
+    position: absolute;
+    top: 340px;
+    left: 220px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 35px;
+    justify-content: center;
 
-    position: absolute;
+    width: 35px;
     width: 35%;
     height: 130px;
-    left: 220px;
-    top: 340px;
 
     .hero-h1 {
-      all: none;
-
-      font-weight: 800;
       font-size: 62px;
+      font-weight: 800;
       line-height: 75px;
 
+      color: #ffffff;
+
+      all: none;
       leading-trim: both;
       text-edge: cap;
-
-      color: #ffffff;
 
       @media (max-width: 768px) {
         font-size: 40.3091px;
@@ -88,15 +97,15 @@ h2 {
     }
 
     .hero-h2 {
-      all: none;
-
-      font-weight: 500;
       font-size: 25.5931px;
+      font-weight: 500;
       line-height: 34px;
 
       text-align: justify;
 
       color: #ffffff;
+
+      all: none;
 
       @media (max-width: 768px) {
         font-size: 18px;
@@ -109,6 +118,7 @@ h2 {
     position: absolute;
     right: 0px;
     bottom: 0px;
+
     width: 940.48px;
     max-width: 50%;
 
@@ -123,28 +133,31 @@ h2 {
 
   .container {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+
     row-gap: 40px;
     column-gap: 40px;
 
     .item {
-      width: 330px;
-      height: 320px;
       display: flex;
+      overflow: hidden;
       flex-direction: column;
 
-      border-radius: 20px;
+      width: 330px;
+      height: 320px;
       padding: 15px;
       padding-bottom: 5px;
 
-      overflow: hidden;
-      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
       transition: box-shadow 0.5s linear;
+
+      border-radius: 20px;
+      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 
       &:hover {
         cursor: pointer;
+
         box-shadow: 0px 0px 15px 5px #00d9ff7e;
 
         .image {
@@ -152,56 +165,71 @@ h2 {
         }
 
         & h3 {
-          color: var(--Light);
           transform: scale(1.05) translate(0, 1.6px);
+
+          color: var(--Light);
         }
       }
 
       .image {
         width: 300px;
         height: 210px;
-        border-radius: 10px;
-        object-fit: cover;
+
         vertical-align: middle;
+
+        border-radius: 10px;
+
+        object-fit: cover;
       }
 
       & h3 {
+        font-size: 20px;
+        font-weight: 600;
+
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-grow: 1;
+        justify-content: center;
+
         width: 300px;
-        font-weight: 600;
-        font-size: 20px;
       }
     }
   }
 }
 
 #main-team-section {
-  background-color: #edf7ff;
   margin-top: 80px;
   padding-top: 40px;
   padding-bottom: 48px;
 
+  background-color: #edf7ff;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   .container {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+
     gap: 30px;
 
-    @media (max-width: 768px){
-      gap: 0;
-      justify-content: space-evenly;
+    @media (max-width: 768px) {
+      flex-wrap: nowrap;
+      gap: 10px;
     }
 
     .item {
-      width: 330px;
-      height: 410px;
-      background-color: white;
       display: flex;
       flex-direction: column;
+
+      width: 330px;
+      height: 410px;
+
+      background-color: white;
+
       justify-items: center;
 
       @media (max-width: 768px) {
@@ -212,12 +240,10 @@ h2 {
       .image {
         width: 330px;
         height: 230px;
-        background-color: #20bdef;
-        border-bottom: var(--Dark) solid 2.4px;
-        object-fit: cover;
-        object-position: center;
 
-        @media (max-width: 768px) {
+        background-color: #20bdef;
+
+        border-bottom: var(--Dark) {
           width: 115px;
           height: 80.91px;
         }
@@ -225,10 +251,10 @@ h2 {
 
       .description {
         display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
 
         @media (max-width: 768px) {
           width: 115px;
@@ -237,7 +263,9 @@ h2 {
 
         & h3 {
           font-size: 28px;
+
           padding-bottom: 5.28px;
+
           color: var(--Light);
 
           @media (max-width: 768px) {
@@ -247,6 +275,7 @@ h2 {
 
         & h4 {
           font-size: 14.4px;
+
           color: var(--Dark-Transparent);
 
           @media (max-width: 768px) {
@@ -261,22 +290,24 @@ h2 {
 #team-section {
   .container {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+
     row-gap: 40px;
     column-gap: 70px;
 
     .item {
-      width: 300px;
-      height: 350px;
       display: flex;
+      overflow: hidden;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+
+      width: 300px;
+      height: 350px;
 
       border-radius: 14px;
-      overflow: hidden;
 
       @media (max-width: 768px) {
         width: 110px;
@@ -286,24 +317,24 @@ h2 {
       .image {
         width: 300px;
         height: 250px;
-        background: linear-gradient(180deg, #f3f3f3 0%, #dbdbdb 100%);
-        border-bottom: var(--Light) solid 2.4px;
-        object-fit: cover;
-        object-position: center;
 
-        @media (max-width: 768px) {
+        background: linear-gradient(180deg, #f3f3f3 0%, #dbdbdb 100%);
+
+        border-bottom: var(--Light) {
           width: 111.35px;
           height: 95.37px;
         }
       }
 
       .description {
-        width: 100%;
         display: flex;
+        align-items: center;
         flex-direction: column;
         flex-grow: 1;
         justify-content: center;
-        align-items: center;
+
+        width: 100%;
+
         row-gap: 2px;
 
         @media (max-width: 768px) {
@@ -312,23 +343,25 @@ h2 {
         }
 
         & h3 {
-          font-weight: 600;
           font-size: 24.9312px;
+          font-weight: 600;
 
           text-align: center;
 
           color: var(--Dark);
+
           @media (max-width: 768px) {
             font-size: 8.78061px;
           }
         }
 
         & h4 {
-          font-weight: 400;
           font-size: 13.8507px;
+          font-weight: 400;
 
           text-align: center;
           text-transform: uppercase;
+
           color: var(--Dark-Transparent);
 
           @media (max-width: 768px) {
@@ -341,27 +374,33 @@ h2 {
 }
 
 #popup {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
+
+  display: none;
+
   width: 100%;
   height: 100%;
+
   background-color: rgba(0, 0, 0, 0.5);
 
   .container {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+
     width: 100%;
+    height: 100%;
+
     background: white;
 
     .header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+
       column-gap: 20px;
 
       .close-button {
@@ -375,16 +414,18 @@ h2 {
 
 #section-zahvalnost {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   & p {
-    color: rgba(8, 34, 52, 0.8);
-    font-weight: 400;
     font-size: 18px;
+    font-weight: 400;
     line-height: 30px;
+
     text-align: justify;
+
+    color: rgba(8, 34, 52, 0.8);
 
     & b {
       color: var(--Light);
@@ -394,18 +435,20 @@ h2 {
 
 #section-partneri {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   .gallery {
-    margin-top: 16px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin-top: 16px;
+
     column-gap: 80px;
     row-gap: 74px;
-    justify-content: space-evenly;
-    align-items: center;
 
     @media (max-width: 768px) {
       column-gap: 15px;
@@ -426,18 +469,25 @@ footer {
   margin-top: 235px;
   padding: 0 8.5%;
 
+  @media (max-width: 768px) {
+    margin-top: 150px;
+  }
+
   .section-1 {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
     padding-right: 48px;
     padding-bottom: 32px;
 
     @media (max-width: 768px) {
-      padding: 0;
       flex-direction: column;
-      row-gap: 60px;
+
       margin-bottom: 60px;
+      padding: 0;
+
+      row-gap: 60px;
     }
 
     .icon-irc {
@@ -457,8 +507,8 @@ footer {
 
     .social-icons {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       & img {
         width: 25px;
@@ -478,13 +528,16 @@ footer {
   }
 
   & p {
+    font-weight: 500;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    color: var(--Dark);
+    flex-direction: column;
+
     margin-top: 18px;
     margin-bottom: 18px;
-    font-weight: 500;
+
+    color: var(--Dark);
   }
 }
 
