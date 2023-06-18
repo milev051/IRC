@@ -3,18 +3,16 @@
   --Dark: #082234;
   --Dark2: #084b7c;
   --Dark-Transparent: #1f1f26bf;
+  --aspect: 9/10;
 }
 
 * {
   font-family: "Inter", sans-serif;
-
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
   transition: 0.25s ease-out;
   text-align: center;
-
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
@@ -37,31 +35,23 @@ html {
   padding-top: 80px;
 }
 
-/* STANDARD */
-
 h1 {
   font-size: 32px;
-
   padding-bottom: 40px;
-
   text-align: center;
 }
 
 h2 {
   font-size: 18px;
-
   margin-bottom: 12px;
-
   text-align: center;
   letter-spacing: 3.2px;
-
   color: var(--Light);
 }
 
 #hero {
   width: 100%;
   height: 844px;
-
   background-color: var(--Light);
   background-position: center;
 
@@ -69,12 +59,10 @@ h2 {
     position: absolute;
     top: 340px;
     left: 220px;
-
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
     width: 35px;
     width: 35%;
     height: 130px;
@@ -83,14 +71,12 @@ h2 {
       font-size: 62px;
       font-weight: 800;
       line-height: 75px;
-
       color: #ffffff;
-
       all: none;
       leading-trim: both;
       text-edge: cap;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         font-size: 40.3091px;
         line-height: 49px;
       }
@@ -100,14 +86,11 @@ h2 {
       font-size: 25.5931px;
       font-weight: 500;
       line-height: 34px;
-
       text-align: justify;
-
       color: #ffffff;
-
       all: none;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         font-size: 18px;
         line-height: 22px;
       }
@@ -118,11 +101,10 @@ h2 {
     position: absolute;
     right: 0px;
     bottom: 0px;
-
     width: 940.48px;
     max-width: 50%;
 
-    @media (max-width: 768px) {
+    @media (max-aspect-ratio: 1) {
       max-width: 90%;
     }
   }
@@ -136,7 +118,6 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-
     row-gap: 40px;
     column-gap: 40px;
 
@@ -144,20 +125,16 @@ h2 {
       display: flex;
       overflow: hidden;
       flex-direction: column;
-
       width: 330px;
       height: 320px;
       padding: 15px;
       padding-bottom: 5px;
-
       transition: box-shadow 0.5s linear;
-
       border-radius: 20px;
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 
       &:hover {
         cursor: pointer;
-
         box-shadow: 0px 0px 15px 5px #00d9ff7e;
 
         .image {
@@ -166,7 +143,6 @@ h2 {
 
         & h3 {
           transform: scale(1.05) translate(0, 1.6px);
-
           color: var(--Light);
         }
       }
@@ -174,23 +150,18 @@ h2 {
       .image {
         width: 300px;
         height: 210px;
-
         vertical-align: middle;
-
         border-radius: 10px;
-
         object-fit: cover;
       }
 
       & h3 {
         font-size: 20px;
         font-weight: 600;
-
         display: flex;
         align-items: center;
         flex-grow: 1;
         justify-content: center;
-
         width: 300px;
       }
     }
@@ -201,11 +172,11 @@ h2 {
   margin-top: 80px;
   padding-top: 40px;
   padding-bottom: 48px;
-
   background-color: #edf7ff;
 
-  @media (max-width: 768px) {
-    padding: 0;
+  @media (max-aspect-ratio: 1) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .container {
@@ -213,26 +184,21 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-
     gap: 30px;
 
-    @media (max-width: 768px) {
-      flex-wrap: nowrap;
+    @media (max-aspect-ratio: 1) {
       gap: 10px;
     }
 
     .item {
       display: flex;
       flex-direction: column;
-
       width: 330px;
       height: 410px;
-
       background-color: white;
-
       justify-items: center;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         width: 115px;
         height: 142.52px;
       }
@@ -240,10 +206,9 @@ h2 {
       .image {
         width: 330px;
         height: 230px;
+        border-bottom: var(--Dark);
 
-        background-color: #20bdef;
-
-        border-bottom: var(--Dark) {
+        @media (max-aspect-ratio: 1) {
           width: 115px;
           height: 80.91px;
         }
@@ -256,29 +221,26 @@ h2 {
         flex-grow: 1;
         justify-content: center;
 
-        @media (max-width: 768px) {
+        @media (max-aspect-ratio: 1) {
           width: 115px;
           height: 45.59px;
         }
 
         & h3 {
           font-size: 28px;
-
           padding-bottom: 5.28px;
-
           color: var(--Light);
 
-          @media (max-width: 768px) {
+          @media (max-aspect-ratio: 1) {
             font-size: 12px;
           }
         }
 
         & h4 {
           font-size: 14.4px;
-
           color: var(--Dark-Transparent);
 
-          @media (max-width: 768px) {
+          @media (max-aspect-ratio: 1) {
             font-size: 6px;
           }
         }
@@ -293,7 +255,6 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-
     row-gap: 40px;
     column-gap: 70px;
 
@@ -303,13 +264,11 @@ h2 {
       align-items: center;
       flex-direction: column;
       justify-content: center;
-
       width: 300px;
       height: 350px;
-
       border-radius: 14px;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         width: 110px;
         height: 130px;
       }
@@ -317,7 +276,6 @@ h2 {
       .image {
         width: 300px;
         height: 250px;
-
         background: linear-gradient(180deg, #f3f3f3 0%, #dbdbdb 100%);
 
         border-bottom: var(--Light) {
@@ -332,12 +290,10 @@ h2 {
         flex-direction: column;
         flex-grow: 1;
         justify-content: center;
-
         width: 100%;
-
         row-gap: 2px;
 
-        @media (max-width: 768px) {
+        @media (max-aspect-ratio: 1) {
           width: 111.35px;
           height: 36.09px;
         }
@@ -345,12 +301,10 @@ h2 {
         & h3 {
           font-size: 24.9312px;
           font-weight: 600;
-
           text-align: center;
-
           color: var(--Dark);
 
-          @media (max-width: 768px) {
+          @media (max-aspect-ratio: 1) {
             font-size: 8.78061px;
           }
         }
@@ -358,13 +312,11 @@ h2 {
         & h4 {
           font-size: 13.8507px;
           font-weight: 400;
-
           text-align: center;
           text-transform: uppercase;
-
           color: var(--Dark-Transparent);
 
-          @media (max-width: 768px) {
+          @media (max-aspect-ratio: 1) {
             font-size: 4.10205px;
           }
         }
@@ -377,12 +329,9 @@ h2 {
   position: fixed;
   top: 0;
   left: 0;
-
   display: none;
-
   width: 100%;
   height: 100%;
-
   background-color: rgba(0, 0, 0, 0.5);
 
   .container {
@@ -390,17 +339,14 @@ h2 {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
     width: 100%;
     height: 100%;
-
     background: white;
 
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       column-gap: 20px;
 
       .close-button {
@@ -422,9 +368,7 @@ h2 {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
-
     text-align: justify;
-
     color: rgba(8, 34, 52, 0.8);
 
     & b {
@@ -444,13 +388,11 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
     margin-top: 16px;
-
     column-gap: 80px;
     row-gap: 74px;
 
-    @media (max-width: 768px) {
+    @media (max-aspect-ratio: 1) {
       column-gap: 15px;
     }
 
@@ -458,7 +400,7 @@ h2 {
       max-width: 200px;
       max-height: 80px;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         max-width: 100px;
       }
     }
@@ -469,7 +411,7 @@ footer {
   margin-top: 235px;
   padding: 0 8.5%;
 
-  @media (max-width: 768px) {
+  @media (max-aspect-ratio: 1) {
     margin-top: 150px;
   }
 
@@ -477,16 +419,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding-right: 48px;
     padding-bottom: 32px;
 
-    @media (max-width: 768px) {
+    @media (max-aspect-ratio: 1) {
       flex-direction: column;
-
       margin-bottom: 60px;
       padding: 0;
-
       row-gap: 60px;
     }
 
@@ -494,7 +433,7 @@ footer {
       width: 240px;
       height: 72px;
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1) {
         width: 270px;
         height: auto;
       }
@@ -529,19 +468,11 @@ footer {
 
   & p {
     font-weight: 500;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-
     margin-top: 18px;
     margin-bottom: 18px;
-
     color: var(--Dark);
   }
-}
-
-/* MOBILE */
-
-@media (max-aspect-ratio: 9/16) {
 }
