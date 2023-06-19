@@ -51,22 +51,27 @@ h2 {
 }
 
 #hero {
+  padding-left: 1%;
   width: 100%;
   height: 844px;
   background-color: var(--Light);
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content:
+      space-around
+  }
 
   .hero-text {
-    position: absolute;
-    top: 340px;
-    left: 220px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 35px;
-    width: 35%;
-    height: 130px;
+    min-width: 40%;
 
     .hero-h1 {
       font-size: 62px;
@@ -77,44 +82,44 @@ h2 {
       leading-trim: both;
       text-edge: cap;
 
-      @media (max-aspect-ratio: 768px) {
-        font-size: 40.3091px;
-        line-height: 49px;
-      }
+      @media (max-width: 768px) {}
     }
 
     .hero-h2 {
-      font-size: 25.5931px;
+      font-size: 22.5931px;
       font-weight: 500;
       line-height: 34px;
-      text-align: justify;
+      text-align: center;
       color: #ffffff;
       all: none;
 
-      @media (max-aspect-ratio: 768px) {
-        font-size: 18px;
-        line-height: 22px;
-      }
+      @media (max-width: 768px) {}
     }
   }
 
-  & img {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    width: 940.48px;
-    max-width: 50%;
+  .hero-image-holder {
+    min-height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 
-    @media (max-aspect-ratio: 768px) {
-      max-width: 90%;
+    & img {
+      max-width: 95%;
+      margin-bottom: -160px;
+
+      @media (max-width: 768px) {
+        max-width: 90%;
+        margin-bottom: -80px;
+      }
     }
+
   }
 }
 
 #project-section {
   margin-top: 40px;
 
-  @media (max-aspect-ratio: 768px) {
+  @media (max-width: 768px) {
     padding: 5%;
   }
 
@@ -126,7 +131,10 @@ h2 {
     row-gap: 40px;
     column-gap: 40px;
 
-    @media (max-aspect-ratio: 768px) {}
+    @media (max-width: 768px) {
+      row-gap: 40px;
+      column-gap: 20px;
+    }
 
     .item {
       display: flex;
@@ -134,7 +142,7 @@ h2 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 20em;
+      width: 320px;
       aspect-ratio: 43/42;
       padding: 15px;
       padding-bottom: 5px;
@@ -142,8 +150,8 @@ h2 {
       border-radius: 20px;
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 
-      @media (max-aspect-ratio: 768px) {
-        width: 25em;
+      @media (max-width: 768px) {
+        width: 192px;
       }
 
       &:hover {
@@ -161,19 +169,19 @@ h2 {
       }
 
       .image {
-        width: 18em;
+        width: 288px;
         aspect-ratio: 3/2;
         vertical-align: middle;
         border-radius: 10px;
         object-fit: cover;
 
-        @media (max-aspect-ratio: 768px) {
-          width: 23em;
+        @media (max-width: 768px) {
+          width: 170px;
         }
       }
 
       & h3 {
-        font-size: 1.25em;
+        font-size: 20px;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -181,8 +189,8 @@ h2 {
         justify-content: center;
         width: 100%;
 
-        @media (max-aspect-ratio: 768px) {
-          font-size: 1.5em;
+        @media (max-width: 768px) {
+          font-size: 14px;
         }
       }
     }
@@ -195,7 +203,7 @@ h2 {
   padding-bottom: 48px;
   background-color: #edf7ff;
 
-  @media (max-aspect-ratio: 768px) {
+  @media (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -207,15 +215,22 @@ h2 {
     justify-content: center;
     gap: 30px;
 
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
 
     .item {
       display: flex;
       flex-direction: column;
       justify-items: center;
-      width: 15em;
+      align-items: center;
+      width: 320px;
       aspect-ratio: 3/4;
       background-color: white;
 
+      @media (max-width: 768px) {
+        max-width: 144px;
+      }
 
       .image {
         width: 100%;
@@ -230,22 +245,29 @@ h2 {
         flex-direction: column;
         flex-grow: 1;
         justify-content: center;
+        padding: 5px;
 
         & h3 {
           font-weight: 600;
+          max-width: 100%;
+          font-size: 28.2857px;
           padding-bottom: 5.28px;
           color: var(--Light);
 
-
-
-          @media (max-aspect-ratio: 768px) {}
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
         }
 
         & h4 {
           font-weight: 300;
+          max-width: 100%;
           color: var(--Dark-Transparent);
+          font-size: 14px;
 
-          @media (max-aspect-ratio: 768px) {}
+          @media (max-width: 768px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -263,50 +285,52 @@ h2 {
 
     .item {
       display: flex;
-      overflow: hidden;
-      align-items: center;
       flex-direction: column;
       justify-content: center;
-      width: 20%;
+      align-items: center;
+      width: 320px;
       aspect-ratio: 3/3.5;
-      border-radius: 14px;
 
-      @media (max-aspect-ratio: 768px) {
-        width: 40%;
+      @media (max-width: 768px) {
+        width: 9em;
       }
 
       .image {
-        width: 300px;
-        height: 250px;
+        width: 100%;
+        aspect-ratio: 3/2.3;
         background: linear-gradient(180deg, #f3f3f3 0%, #dbdbdb 100%);
-
-        border-bottom: var(--Light) {}
+        border-bottom: var(--Light);
       }
 
       .description {
         display: flex;
-        align-items: center;
         flex-direction: column;
-        flex-grow: 1;
         justify-content: center;
-        width: 100%;
+        align-items: center;
+        flex-grow: 1;
         row-gap: 2px;
 
-        @media (max-aspect-ratio: 768px) {}
+        @media (max-width: 768px) {}
 
         & h3 {
-          font-size: 24.9312px;
+          font-size: 25.9312px;
           font-weight: 600;
-          text-align: center;
           color: var(--Dark);
+          width: 100%;
+
+          @media (max-width: 768px) {
+            font-size: 15px;
+          }
         }
 
         & h4 {
-          font-size: 13.8507px;
+          font-size: 14px;
           font-weight: 400;
-          text-align: center;
-          text-transform: uppercase;
           color: var(--Dark-Transparent);
+
+          @media (max-width: 768px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -380,7 +404,7 @@ h2 {
     column-gap: 80px;
     row-gap: 74px;
 
-    @media (max-aspect-ratio: 768px) {
+    @media (max-width: 768px) {
       column-gap: 15px;
     }
 
@@ -388,7 +412,7 @@ h2 {
       max-width: 200px;
       max-height: 80px;
 
-      @media (max-aspect-ratio: 768px) {
+      @media (max-width: 768px) {
         max-width: 100px;
       }
     }
@@ -399,7 +423,7 @@ footer {
   margin-top: 235px;
   padding: 0 8.5%;
 
-  @media (max-aspect-ratio: 768px) {
+  @media (max-width: 768px) {
     margin-top: 150px;
   }
 
@@ -410,7 +434,7 @@ footer {
     padding-right: 48px;
     padding-bottom: 32px;
 
-    @media (max-aspect-ratio: 768px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       margin-bottom: 60px;
       padding: 0;
@@ -421,7 +445,7 @@ footer {
       width: 240px;
       height: 72px;
 
-      @media (max-aspect-ratio: 768px) {
+      @media (max-width: 768px) {
         width: 270px;
         height: auto;
       }
