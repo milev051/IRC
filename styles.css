@@ -90,7 +90,7 @@ header {
       justify-content: space-between;
       gap: 2rem;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
@@ -123,7 +123,7 @@ header {
       text-shadow: 0 0 20px #082234;
     }
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }
@@ -135,7 +135,7 @@ header {
     width: 2rem;
     height: 2rem;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       display: flex;
 
     }
@@ -159,7 +159,7 @@ header {
 
   padding-top: 10px;
 
-  @media only screen (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: space-around;
     padding-left: 0;
@@ -174,7 +174,7 @@ header {
     justify-content: center;
     min-width: 40%;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       max-width: 80%;
     }
 
@@ -184,7 +184,7 @@ header {
       color: #ffffff;
       transition: 0s;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         font-size: 300%;
       }
     }
@@ -195,7 +195,7 @@ header {
       color: #ffffff;
       transition: 0s;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         font-size: 150%;
       }
     }
@@ -208,7 +208,7 @@ header {
 
     transition: 0s;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       max-width: 95%;
       margin-bottom: -20px;
     }
@@ -219,7 +219,7 @@ header {
 #project-section {
   margin-top: 40px;
 
-  @media only screen (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     margin-top: 80px;
     padding: 5%;
   }
@@ -232,7 +232,7 @@ header {
     row-gap: 40px;
     column-gap: 40px;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       row-gap: 40px;
       column-gap: 20px;
     }
@@ -251,14 +251,10 @@ header {
       border-radius: 20px;
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         width: 192px;
       }
 
-      @media only screen (min-width: 768px){
-        
-      }
-      
       &:hover {
         cursor: pointer;
         box-shadow: 0px 0px 15px 5px #00d9ff7e;
@@ -280,7 +276,7 @@ header {
         border-radius: 10px;
         object-fit: cover;
 
-        @media only screen (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           width: 170px;
         }
       }
@@ -294,7 +290,7 @@ header {
         justify-content: center;
         width: 100%;
 
-        @media only screen (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           font-size: 14px;
         }
       }
@@ -308,7 +304,7 @@ header {
   padding-bottom: 48px;
   background-color: #edf7ff;
 
-  @media only screen (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -320,7 +316,7 @@ header {
     justify-content: center;
     gap: 30px;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       gap: 15px;
     }
 
@@ -333,7 +329,7 @@ header {
       aspect-ratio: 3/4;
       background-color: white;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         max-width: 144px;
       }
 
@@ -359,7 +355,7 @@ header {
           padding-bottom: 5.28px;
           color: var(--Light);
 
-          @media only screen (max-width: 768px) {
+          @media screen and (max-width: 768px) {
             font-size: 18px;
           }
         }
@@ -370,7 +366,7 @@ header {
           color: var(--Dark-Transparent);
           font-size: 14px;
 
-          @media only screen (max-width: 768px) {
+          @media screen and (max-width: 768px) {
             font-size: 10px;
           }
         }
@@ -396,7 +392,7 @@ header {
       width: 320px;
       aspect-ratio: 3/3.5;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         width: 11.5em;
       }
 
@@ -415,7 +411,7 @@ header {
         flex-grow: 1;
         row-gap: 2px;
 
-        @media only screen (max-width: 768px) {}
+        @media screen and (max-width: 768px) {}
 
         & h3 {
           font-size: 25.9312px;
@@ -423,7 +419,7 @@ header {
           color: var(--Dark);
           width: 100%;
 
-          @media only screen (max-width: 768px) {
+          @media screen and (max-width: 768px) {
             font-size: 15px;
           }
         }
@@ -433,7 +429,7 @@ header {
           font-weight: 400;
           color: var(--Dark-Transparent);
 
-          @media only screen (max-width: 768px) {
+          @media screen and (max-width: 768px) {
             font-size: 10px;
           }
         }
@@ -509,7 +505,7 @@ header {
     column-gap: 80px;
     row-gap: 70px;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       column-gap: 15px;
     }
 
@@ -517,7 +513,7 @@ header {
       max-width: 200px;
       max-height: 80px;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         max-width: 150px;
       }
     }
@@ -527,7 +523,7 @@ header {
 footer {
   margin-top: 235px;
 
-  @media only screen (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     margin-top: 100px;
   }
 
@@ -538,7 +534,7 @@ footer {
     padding-right: 48px;
     padding-bottom: 32px;
 
-    @media only screen (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
       margin-bottom: 60px;
       padding: 0;
@@ -549,7 +545,7 @@ footer {
       width: 240px;
       height: 72px;
 
-      @media only screen (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         width: 270px;
         height: auto;
       }
