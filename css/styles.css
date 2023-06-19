@@ -38,79 +38,72 @@ h1 {
   font-size: 32px;
   padding-bottom: 40px;
   font-weight: 600;
-  text-align: center;
 }
 
 h2 {
   font-size: 18px;
   margin-bottom: 12px;
-  text-align: center;
   font-weight: 400;
   letter-spacing: 3.2px;
   color: var(--Light);
 }
 
 #hero {
-  padding-left: 1%;
   width: 100%;
-  height: 844px;
+  min-height: 80vh;
   background-color: var(--Light);
   background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 40px;
+  padding-left: 15px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    justify-content:
-      space-around
+    justify-content: space-around;
+    min-height: 70vh;
+    padding-top: 2rem;
   }
 
   .hero-text {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     min-width: 40%;
 
     .hero-h1 {
-      font-size: 62px;
+      font-size: 4vw;
       font-weight: 800;
-      line-height: 75px;
       color: #ffffff;
-      all: none;
-      leading-trim: both;
-      text-edge: cap;
+      transition: 0s;
 
-      @media (max-width: 768px) {}
+      @media (max-width: 768px) {
+        font-size: 300%;
+      }
     }
 
     .hero-h2 {
-      font-size: 22.5931px;
+      font-size: 2vw;
       font-weight: 500;
-      line-height: 34px;
-      text-align: center;
       color: #ffffff;
-      all: none;
+      transition: 0s;
 
-      @media (max-width: 768px) {}
+      @media (max-width: 768px) {
+        font-size: 150%;
+      }
     }
   }
 
-  .hero-image-holder {
-    min-height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  & img {
+    max-width: 50%;
+    margin-bottom: -10%;
 
-    & img {
-      max-width: 95%;
-      margin-bottom: -160px;
-
-      @media (max-width: 768px) {
-        max-width: 90%;
-        margin-bottom: -80px;
-      }
+    @media (max-width: 768px) {
+      max-width: 90%;
+      margin-bottom: -40px;
     }
 
   }
