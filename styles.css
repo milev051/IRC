@@ -58,7 +58,7 @@ header {
   border-radius: 0 0 2% 2%;
 
   & a {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
 
     color: #ffffffcc;
@@ -71,8 +71,8 @@ header {
 
   #logo {
     z-index: 10;
-    width: 12.5rem;
-    margin-right: 4rem;
+    width: 200px;
+    margin-right: 64px;
   }
 
   & nav {
@@ -81,14 +81,14 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 1.25rem 8.5%;
+    padding: 20px 8.5%;
 
     #menu {
       display: flex;
       align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      gap: 2rem;
+      gap: 32px;
 
       @media screen and (max-width: 768px) {
         display: none;
@@ -103,9 +103,9 @@ header {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    gap: 2rem;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 32px;
     z-index: 2;
     background-color: transparent;
     background-color: white;
@@ -132,8 +132,8 @@ header {
     z-index: 6;
 
     display: none;
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
 
     @media screen and (max-width: 768px) {
       display: flex;
@@ -234,7 +234,7 @@ header {
 
     @media screen and (max-width: 768px) {
       row-gap: 40px;
-      column-gap: 20px;
+      column-gap: 5%;
     }
 
     .item {
@@ -244,15 +244,17 @@ header {
       justify-content: center;
       align-items: center;
       width: 320px;
-      aspect-ratio: 43/42;
-      padding: 15px;
-      padding-bottom: 5px;
+      aspect-ratio: 43/40;
+      padding: 2%;
+      padding-bottom: 0.25%;
       transition: box-shadow 0.5s linear;
       border-radius: 20px;
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 
       @media screen and (max-width: 768px) {
-        width: 192px;
+        width: 46%;
+        aspect-ratio: 4/4;
+        padding-bottom: 2%;
       }
 
       &:hover {
@@ -270,19 +272,18 @@ header {
       }
 
       .image {
-        width: 288px;
+        width: 100%;
         aspect-ratio: 3/2;
         vertical-align: middle;
         border-radius: 10px;
         object-fit: cover;
 
         @media screen and (max-width: 768px) {
-          width: 170px;
         }
       }
 
       & h3 {
-        font-size: 20px;
+        font-size: 110%;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -291,7 +292,11 @@ header {
         width: 100%;
 
         @media screen and (max-width: 768px) {
-          font-size: 14px;
+          font-size: 90%;
+        }
+
+        @media screen and (max-width: 300px) {
+          font-size: 65%;
         }
       }
     }
@@ -311,13 +316,13 @@ header {
 
   .container {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 
     @media screen and (max-width: 768px) {
-      gap: 15px;
+      gap: 2%;
     }
 
     .item {
@@ -330,7 +335,7 @@ header {
       background-color: white;
 
       @media screen and (max-width: 768px) {
-        max-width: 144px;
+        max-width: 30%;
       }
 
       .image {
@@ -351,12 +356,12 @@ header {
         & h3 {
           font-weight: 600;
           max-width: 100%;
-          font-size: 28.2857px;
+          font-size: 28.2864px;
           padding-bottom: 5.28px;
           color: var(--Light);
 
           @media screen and (max-width: 768px) {
-            font-size: 18px;
+            font-size: 15px;
           }
         }
 
@@ -367,7 +372,7 @@ header {
           font-size: 14px;
 
           @media screen and (max-width: 768px) {
-            font-size: 10px;
+            font-size: 8px;
           }
         }
       }
@@ -378,11 +383,16 @@ header {
 #team-section {
   .container {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 40px;
     column-gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      row-gap: 25px;
+      column-gap: 20px;
+    }
 
     .item {
       display: flex;
@@ -393,7 +403,7 @@ header {
       aspect-ratio: 3/3.5;
 
       @media screen and (max-width: 768px) {
-        width: 11.5em;
+        width:43%;
       }
 
       .image {
@@ -483,9 +493,14 @@ header {
     line-height: 30px;
     text-align: justify;
     color: rgba(8, 34, 52, 0.8);
-
+    
     & b {
       color: var(--Light);
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 15px;
+      line-height: 24px;
     }
   }
 }
@@ -514,7 +529,7 @@ header {
       max-height: 80px;
 
       @media screen and (max-width: 768px) {
-        max-width: 150px;
+        max-width: 90px;
       }
     }
   }
@@ -536,9 +551,10 @@ footer {
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      margin-bottom: 60px;
+      
       padding: 0;
-      row-gap: 60px;
+      margin-bottom: 40px;
+      row-gap: 40px;
     }
 
     .icon-irc {
@@ -546,7 +562,7 @@ footer {
       height: 72px;
 
       @media screen and (max-width: 768px) {
-        width: 270px;
+        width: 180px;
         height: auto;
       }
 
@@ -562,9 +578,11 @@ footer {
       justify-content: space-between;
 
       & img {
-        width: 40px;
-        height: 40px;
+        width: 15px;
+        height: 15px;
         margin: 0 16px;
+
+        
 
         &:hover {
           cursor: pointer;
@@ -586,5 +604,9 @@ footer {
     margin-top: 18px;
     margin-bottom: 18px;
     color: var(--Dark);
+
+    @media screen and (max-width: 768px) {
+      font-size: 12.8px;
+    }
   }
 }
