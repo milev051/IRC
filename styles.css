@@ -24,6 +24,7 @@ html {
   overflow-x: hidden;
 }
 
+footer,
 #project-section,
 #main-team-section,
 #team-section,
@@ -48,10 +49,105 @@ h2 {
   color: var(--Light);
 }
 
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 19;
+  overflow: hidden;
+  transition: 0s;
+  border-radius: 0 0 2% 2%;
+
+  & a {
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: #ffffffcc;
+  }
+
+  & a:hover {
+    color: white;
+    text-shadow: 0 0 20px #fff;
+  }
+
+  #logo {
+    z-index: 10;
+    width: 12.5rem;
+    margin-right: 4rem;
+  }
+
+  & nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 1.25rem 8.5%;
+
+    #menu {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+
+  }
+
+  #menu2 {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    gap: 2rem;
+    z-index: 2;
+    background-color: transparent;
+    background-color: white;
+    overflow: hidden;
+
+    & a {
+      font-weight: 600;
+      font-size: 25px;
+      height: 48px;
+      color: #082234cc;
+    }
+
+    & a:hover {
+      color: #082234;
+      text-shadow: 0 0 20px #082234;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  #hamburger {
+    z-index: 6;
+
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    @media (max-width: 768px) {
+      display: flex;
+
+    }
+  }
+}
+
 #hero {
   width: 100%;
-  min-height: 80vh;
-  background-color: var(--Light);
+  max-height: 90vh;
+  height: 50vw;
+  background-image: url("img/hero-bg.png");
+  background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: row;
@@ -59,12 +155,16 @@ h2 {
   align-items: center;
   gap: 40px;
   padding-left: 15px;
+  transition: 0s;
+
+  padding-top: 10px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: space-around;
-    min-height: 70vh;
-    padding-top: 2rem;
+    padding-left: 0;
+    min-height: 700px;
+    padding-top: 30%;
   }
 
   .hero-text {
@@ -73,6 +173,10 @@ h2 {
     align-items: center;
     justify-content: center;
     min-width: 40%;
+
+    @media (max-width: 768px) {
+      max-width: 80%;
+    }
 
     .hero-h1 {
       font-size: 4vw;
@@ -99,11 +203,14 @@ h2 {
 
   & img {
     max-width: 50%;
-    margin-bottom: -10%;
+    align-self: flex-end;
+    margin-bottom: -3%;
+
+    transition: 0s;
 
     @media (max-width: 768px) {
-      max-width: 90%;
-      margin-bottom: -40px;
+      max-width: 80%;
+      margin-bottom: -20px;
     }
 
   }
@@ -113,6 +220,7 @@ h2 {
   margin-top: 40px;
 
   @media (max-width: 768px) {
+    margin-top: 80px;
     padding: 5%;
   }
 
@@ -414,7 +522,6 @@ h2 {
 
 footer {
   margin-top: 235px;
-  padding: 0 8.5%;
 
   @media (max-width: 768px) {
     margin-top: 150px;

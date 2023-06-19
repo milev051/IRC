@@ -4,28 +4,31 @@
 <head>
     <title>IRC FON</title>
     <link rel="icon" href="img/logo-page.png">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
 
-    <!-- <header>
+    <header>
         <nav>
-            <a href="">
-                <img class="logo" src="img/icon-irc-white.png" alt="">
-            </a>
+            <img id="logo" src="img/icon-irc-white.png" alt="">
             <div id="menu">
                 <a href="#project-section">Realizovani projekti</a>
                 <a href="#main-team-section">Tim</a>
                 <a href="#section-zahvalnost">Zahvalnost profesorima</a>
                 <a href="#section-partneri">Partneri</a>
             </div>
-            <img class="hamburger" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
+            <img id="hamburger" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
         </nav>
-    </header> -->
+        <div id="menu2">
+            <a href="#project-section" onclick="closeMenu()">Realizovani projekti</a>
+            <a href="#main-team-section" onclick="closeMenu()">Tim</a>
+            <a href="#section-zahvalnost" onclick="closeMenu()">Zahvalnost profesorima</a>
+            <a href="#section-partneri" onclick="closeMenu()">Partneri</a>
+        </div>
+    </header>
 
     <section id="hero">
         <div class="hero-text">
@@ -299,7 +302,7 @@
         <p>© 2023 Istraživaèko-razvojni centar FON</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
