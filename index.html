@@ -15,142 +15,156 @@
 
     <header>
         <nav>
-            <img id="logo" src="img/icon-irc-white.png" alt="">
-            <div id="menu">
+            <img id="header-logo" src="img/icon-irc-white.png" alt="">
+            <div id="header-menu">
                 <a href="#project-section">Realizovani projekti</a>
                 <a href="#main-team-section">Tim</a>
-                <a href="#section-zahvalnost">Zahvalnost profesorima</a>
-                <a href="#section-partneri">Partneri</a>
+                <a href="#zahvalnost-section">Zahvalnost profesorima</a>
+                <a href="#pertneri-section">Partneri</a>
             </div>
-            <img id="hamburger" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
+            <img id="header-hamburger-icon" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
         </nav>
-        <div id="menu2">
+        <div id="header-menu2">
             <a href="#project-section" onclick="closeMenu()">Realizovani projekti</a>
             <a href="#main-team-section" onclick="closeMenu()">Tim</a>
-            <a href="#section-zahvalnost" onclick="closeMenu()">Zahvalnost profesorima</a>
-            <a href="#section-partneri" onclick="closeMenu()">Partneri</a>
+            <a href="#zahvalnost-section" onclick="closeMenu()">Zahvalnost profesorima</a>
+            <a href="#pertneri-section" onclick="closeMenu()">Partneri</a>
         </div>
     </header>
 
-    <section id="hero">
+    <section id="hero-section">
         <div class="hero-text">
-            <div class="hero-h1">IRC Digitalni bilten</div>
-            <div class="hero-h2">Rezultati aktivnosti u školskoj 2022/23. godini</div>
+            <div class="hero-title">IRC<br class="font-break"> Digitalni bilten</div>
+            <div class="hero-subtitle">AKTIVNOSTI U ŠKOLSKOJ 2022/23. GODINI</div>
         </div>
-        <img src="img/metric.png" alt="">
+        <img class="hero-metric-img" src="img/metric.png" alt="">
     </section>
 
     <section id="project-section">
-        <h2>REALIZOVANI</h2>
-        <h1>Projekti u školskoj 2022/23. godini</h1>
-        <div class="container">
+        <h1>Realizovani projekti </h1>
+        <h2>u školskoj 2022/23. godini</h2>
+        <div class="project-container">
 
-            <div class="item" onclick="showPopup()">
-                <img class="image" src="img/Projects/01.jpg">
-                <h3>RénovationRetail Case Challenge</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/01.jpg">
+                <p class="project-title">RiseUp! razvojni program</p>
+            </div>
+            <div class="popup">
+                <div class="popup-container">
+                    <div class="popup-close-button"><img src="" alt=""></div>
+
+                </div>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/02.jpg">
-                <h3>RénovationRetail Case Challenge</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/02.jpg">
+                <p class="project-title">Route2Launch program</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/03.jpg">
-                <h3>ERP Academy</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/03.jpg">
+                <p class="project-title">Expert2Mentors#2 trening program</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/04.jpg">
-                <h3>Florence Days</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/04.jpg">
+                <p class="project-title">Nedelja studentskih ideja</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/05.jpg">
-                <h3>Route2Launch</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/05.jpg">
+                <p class="project-title">Skyrocket Account Management Academy</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/06.jpg">
-                <h3>Nedelja studentskih ideja</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/06.jpg">
+                <p class="project-title">Florence Days</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/07.jpg">
-                <h3>Expert2Mentors #2</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/07.jpg">
+                <p class="project-title">Rénovation Retail Case Challenge</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/08.jpg">
-                <h3>Skyrocket Account
-                    Management Academy</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/08.jpg">
+                <p class="project-title">Endava Training Program</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/09.jpg">
-                <h3>Gde žive podaci</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/09.jpg">
+                <p class="project-title">ERP Akademija</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/10.jpg">
-                <h3>Endava Project Management
-                    Training Program</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/10.jpg">
+                <p class="project-title">OTP Youth Hub</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/11.jpg">
-                <h3>Open Data takmièenje</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/11.jpg">
+                <p class="project-title">Humanitarni projekat: EmpowerIT</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/12.jpg">
-                <h3>Humanitarni projekat: Empower IT</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/12.jpg">
+                <p class="project-title">Open Data takmičenje</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/13.jpg">
-                <h3>Florence Days</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/13.jpg">
+                <p class="project-title">Predavanje: Gde žive podaci</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/14.jpg">
-                <h3>OTP Youth Hub</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/14.jpg">
+                <p class="project-title">International Programming Contest</p>
             </div>
 
-            <div class="item">
-                <img class="image" src="img/Projects/09.jpg">
-                <h3>Gde žive podaci</h3>
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/15.jpg">
+                <p class="project-title">FON Ideje</p>
+            </div>
+
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/16.jpg">
+                <p class="project-title">Interno deljenje znanja</p>
+            </div>
+
+            <div class="project-item" onclick="showPopup()">
+                <img class="project-image" src="img/Projects/17.jpg">
+                <p class="project-title">Startap Pitch Rehearsals</p>
             </div>
 
         </div>
     </section>
 
     <section id="main-team-section">
-        <h2>IRC</h2>
         <h1>Tim</h1>
-        <div class="container">
+        <h2>IRC-a</h2>
+        <div class="main-team-container">
 
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Ana Miličević</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-description">
+                    <p class="main-team-name">Ana Miličević</p>
+                    <p class="main-team-position">PROGRAM MENADŽERKA IRC-A</p>
                 </div>
             </div>
 
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Marija Vitaz</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-description">
+                    <p class="main-team-name">Marija Vitaz</p>
+                    <p class="main-team-position">PROJEKTNA KOORDINATORKA</p>
                 </div>
             </div>
 
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Tamara Đerić</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="main-team-item">
+                <img class="main-team-image" src="">
+                <div class="main-team-description">
+                    <p class="main-team-name">Tamara Đerić</p>
+                    <p class="main-team-position">PROJEKTNA KOORDINATORKA</p>
                 </div>
             </div>
 
@@ -158,125 +172,135 @@
     </section>
 
     <section id="team-section">
-        <div class="container">
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Marko Savićević</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+        <div class="team-container">
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Aleksa Đurić</p>
+                    <p class="team-position">Programer</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Marko Milev</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Ana Miladinović</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Aleksa Đurić</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Anđela Ivković</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Milica</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Iva Branković</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Anđela</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Ivona Jovanović</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Staša Piletić</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Jovana Jeremić</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Iva</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Marko Milev</p>
+                    <p class="team-position">Programer</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Miljan Terzić</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Marko Savićević</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Ivona</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Milica Prica</p>
+                    <p class="team-position">Dizajnerka</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Jovana</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Miljan Terzić</p>
+                    <p class="team-position">Praktikant</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Jovana</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Sara Damljanović</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
-            <div class="item">
-                <img class="image" src="">
-                <div class="description">
-                    <h3>Sara Damljanović</h3>
-                    <h4>STUDENT MASTER STUDIJA</h4>
+            <div class="team-item">
+                <img class="team-image" src="">
+                <div class="team-description">
+                    <p class="team-name">Staša Piletić</p>
+                    <p class="team-position">Praktikantkinja</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="section-zahvalnost">
-        <h2>ZAHVALNOST</h2>
-        <h1>Lista angažovanih nastavnika i saradnika sa FON-a</h1>
-        <p>Aleksandar Đoković <b>•</b> Aleksandar Rakićević <b>•</b> Ana Poledica <b>•</b> Andrea Nikolić <b>•</b> Anđelija Đorđević <b>•</b> Biljana
-            Cvetić <b>•</b> Boris Delibašić <b>•</b> Branka Novčić Korać <b>•</b> Bratislav Petrović <b>•</b> Dragan Ristović <b>•</b> Dragana Stojanović <b>•</b>
-            Dragan Vukmirović <b>•</b> Dušan Barać <b>•</b> Dušan Mitrović <b>•</b> Đorđe Krivokapić <b>•</b> Ivan Luković <b>•</b> Ivan Todorović <b>•</b> Ivan
-            Tomašević <b>•</b> Jasna Petković <b>•</b> Jelena Andreja Radaković <b>•</b> Jelena Anđelković Labrović <b>•</b> Jelica Stanojević <b>•</b>
-            Jovana Rakićević <b>•</b> Lena Đorđević Milutinović <b>•</b> Marija Jović <b>•</b> Marko Ćirović <b>•</b> Milan Okanović <b>•</b> Milan
-            Radojičić <b>•</b> Milica Jovanović <b>•</b> Milica Simić <b>•</b> Miloš Jovanović <b>•</b> Miloš Milosavljević <b>•</b> Miloš Parežanin <b>•</b>
-            Mladen Čudanov <b>•</b> Nataša Petrović <b>•</b> Nemanja Milanović <b>•</b> Nemanja Milenković <b>•</b> Ognjen Anđelić <b>•</b> Ognjen Nikolić
-            <b>•</b> Pavle Milošević <b>•</b> Petar Lukovac <b>•</b> Petar Stanimirović <b>•</b> Radul Milutinović <b>•</b> Sanja Marinković <b>•</b> Siniša
-            Vlajić <b>•</b> Slađana Barjaktarović Rakočević <b>•</b> Slavica Cicvarić Kostić <b>•</b> Svetlana Jovanović <b>•</b> Tamara Naumović <b>•</b>
-            Tea Borozan <b>•</b> Teodora Rajković <b>•</b> Uroš Šošević <b>•</b> Vladan Devedžić <b>•</b> Zoran Radojičić <b>•</b> Zoran Rakićević
+    <section id="zahvalnost-section">
+        <h1>Zahvalnost</h1>
+        <h2>ANGAŽOVANIM NASTAVNICIMA <br class="font-break">I SARADNICIMA FON-A</h2>
+        <p>Aleksandar Đoković <b>•</b> Aleksandar Rakićević <b>•</b> Ana Poledica <b>•</b> Andrea Nikolić <b>•</b>
+            Anđelija Đorđević <b>•</b> Biljana
+            Cvetić <b>•</b> Boris Delibašić <b>•</b> Branka Novčić Korać <b>•</b> Bratislav Petrović <b>•</b> Dragan
+            Ristović <b>•</b> Dragana Stojanović <b>•</b>
+            Dragan Vukmirović <b>•</b> Dušan Barać <b>•</b> Dušan Mitrović <b>•</b> Đorđe Krivokapić <b>•</b> Ivan
+            Luković <b>•</b> Ivan Todorović <b>•</b> Ivan
+            Tomašević <b>•</b> Jasna Petković <b>•</b> Jelena Andreja Radaković <b>•</b> Jelena Anđelković Labrović
+            <b>•</b> Jelica Stanojević <b>•</b>
+            Jovana Rakićević <b>•</b> Lena Đorđević Milutinović <b>•</b> Marija Jović <b>•</b> Marko Ćirović <b>•</b>
+            Milan Okanović <b>•</b> Milan
+            Radojičić <b>•</b> Milica Jovanović <b>•</b> Milica Simić <b>•</b> Miloš Jovanović <b>•</b> Miloš
+            Milosavljević <b>•</b> Miloš Parežanin <b>•</b>
+            Mladen Čudanov <b>•</b> Nataša Petrović <b>•</b> Nemanja Milanović <b>•</b> Nemanja Milenković <b>•</b>
+            Ognjen Anđelić <b>•</b> Ognjen Nikolić
+            <b>•</b> Pavle Milošević <b>•</b> Petar Lukovac <b>•</b> Petar Stanimirović <b>•</b> Radul Milutinović
+            <b>•</b> Sanja Marinković <b>•</b> Siniša
+            Vlajić <b>•</b> Slađana Barjaktarović Rakočević <b>•</b> Slavica Cicvarić Kostić <b>•</b> Svetlana Jovanović
+            <b>•</b> Tamara Naumović <b>•</b>
+            Tea Borozan <b>•</b> Teodora Rajković <b>•</b> Uroš Šošević <b>•</b> Vladan Devedžić <b>•</b> Zoran
+            Radojičić <b>•</b> Zoran Rakićević
         </p>
     </section>
 
-    <section id="section-partneri">
-        <h2>UPOZNAJTE</h2>
-        <h1>Partnere</h1>
-        <div class="gallery">
-            <img src="img/Partners/01.png" alt="">
-            <img src="img/Partners/02.png" alt="">
-            <img src="img/Partners/03.png" alt="">
-            <img src="img/Partners/04.png" alt="">
-            <img src="img/Partners/05.png" alt="">
-            <img src="img/Partners/06.png" alt="">
-            <img src="img/Partners/07.png" alt="">
-            <img src="img/Partners/08.png" alt="">
-            <img src="img/Partners/09.png" alt="">
-            <img src="img/Partners/10.png" alt="">
-            <img src="img/Partners/11.png" alt="">
+    <section id="pertneri-section">
+        <h1>Partneri</h1>
+        <h2>REALIZOVANIH PROJEKATA</h2>
+        <div class="partneri-gallery">
+            <img class="partneri-img" src="img/Partners/01.png" alt="">
+            <img class="partneri-img" src="img/Partners/02.png" alt="">
+            <img class="partneri-img" src="img/Partners/03.png" alt="">
+            <img class="partneri-img" src="img/Partners/04.png" alt="">
+            <img class="partneri-img" src="img/Partners/05.png" alt="">
+            <img class="partneri-img" src="img/Partners/06.png" alt="">
+            <img class="partneri-img" src="img/Partners/07.png" alt="">
+            <img class="partneri-img" src="img/Partners/08.png" alt="">
+            <img class="partneri-img" src="img/Partners/09.png" alt="">
+            <img class="partneri-img" src="img/Partners/10.png" alt="">
+            <img class="partneri-img" src="img/Partners/11.png" alt="">
         </div>
     </section>
 
@@ -284,14 +308,16 @@
         <div class="section-1">
             <img class="icon-irc" src="img/icon-irc.png" alt="">
             <div class="social-icons">
-                <a href="https://www.instagram.com/ircfon/"><img class="social-icon" src="img/icon-instagram.png"></a>
-                <a href="https://www.linkedin.com/company/ircfon/"><img class="social-icon"
+                <a target="_blank" href="https://www.instagram.com/ircfon/"><img class="social-icon"
+                        src="img/icon-instagram.png"></a>
+                <a target="_blank" href="https://www.linkedin.com/company/ircfon/"><img class="social-icon"
                         src="img/icon-linkedin.png"></a>
-                <a href="https://www.facebook.com/ircFON/"><img class="social-icon" src="img/icon-facebook.png"></a>
+                <a target="_blank" href="https://www.facebook.com/ircFON/"><img class="social-icon"
+                        src="img/icon-facebook.png"></a>
             </div>
         </div>
         <hr>
-        <p>© 2023 Istraživaèko-razvojni centar FON</p>
+        <p>© 2023 Istraživačko-razvojni centar FON</p>
     </footer>
 
     <script src="script.js"></script>
