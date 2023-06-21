@@ -19,9 +19,9 @@ function hidePopup() {
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 
-var menu = document.getElementById("menu2");
-var logo = document.getElementById("logo");
-var hamburger = document.getElementById("hamburger");
+var menu = document.getElementById("header-menu2");
+var logo = document.getElementById("header-logo");
+var hamburger = document.getElementById("header-hamburger-icon");
 var header = document.getElementsByTagName("header")[0];
 function toggleMenu() {
   if (menu.style.display === "flex") {
