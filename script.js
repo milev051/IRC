@@ -14,7 +14,7 @@ function closeMenu() {
   menu.style.display = "none";
   logo.src = "img/icon-irc-white.png";
   hamburger.src = "img/icon-hamburger.png"
-  header.style.backgroundColor = "#1da1ff";
+  header.style.backgroundColor = "#transparent";
 }
 function openMenu() {
   menu.style.display = "flex";
@@ -273,7 +273,12 @@ function returnCorrectMetricString(i) {
         imageLink = 'img/metric/fakultet.svg'
         break;
       case 'Net promoter score':
-        imageLink = 'img/metric/ocena.svg'
+        if (parseFloat(projects[i].metric[j]) > 75)
+          imageLink = 'img/metric/ocena80.svg'
+        if (parseFloat(projects[i].metric[j]) > 90)
+          imageLink = 'img/metric/ocena93.svg'
+        if (parseFloat(projects[i].metric[j]) > 95)
+          imageLink = 'img/metric/ocena100.svg'
         break;
       default:
         break;
@@ -314,7 +319,6 @@ function createPopupItem(i) {
           `+ returnCorrectMetricString(i) + `
           </div>
           `+ returnPartnerString(i) + returnButtonStrign(i) + `
-          
         </div>
         <div class="popup-dim" onclick="closePopup('popup` + i + `')"></div>
       </div>
@@ -326,12 +330,10 @@ function createProjectItem(i) {
   document.getElementsByClassName("project-container")[0].insertAdjacentHTML(
     "beforeend",
     `
-        <div class="project-item" onmouseover=" this.style.boxShadow='0px 0px 5px 5px #`+ projects[i].color + `';"
-                                  onmouseout="  this.style.boxShadow='0px 0px 10px 10px rgba(0, 0, 0, 0.05)';" 
-                                  onclick="     showPopup('popup` + i + `')">
-
+        <div class="project-item" onclick="     showPopup('popup` + i + `')">
+            <img class="project-info-image" src="img/info.svg">
             <img class="project-image" src="img/projects/`+ i + `.jpg">
-            <p class="project-title pop" style="color: #`+ projects[i].color + `;">` + projects[i].title + `</p>
+            <p class="project-title pop">` + projects[i].title + `</p>
         </div>
     `
   )
@@ -348,7 +350,7 @@ window.addEventListener('scroll', function () {
   var opacity = Math.min(window.scrollY / 50, 1); /* Change 300 to the scroll amount where you want the transition to be complete */
   var color = `rgba(29, 161, 255, ${opacity})`; /* Same color as #1da1ff, but with variable opacity */
 
-  if (window.scrollY > 0) {
+  if (window.scrollY > 600) {
     header.style.backgroundColor = color;
     this.document.getElementById("header-menu2").style.height = "auto";
     header.classList.add('transparent-header');

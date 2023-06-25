@@ -362,6 +362,17 @@ header nav {
   vertical-align: middle;
   border-radius: 5px;
   object-fit: cover;
+  position: relative;
+}
+
+.project-info-image {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  float: left;
+  right: 0;
+  top: 0;
+  display: none;
 }
 
 .project-title {
@@ -579,7 +590,6 @@ header nav {
   max-width: 95%;
   max-height: 95%;
   min-width: 50%;
-  width: 50%;
   height: fit-content;
   background: white;
   overflow: hidden;
@@ -614,6 +624,7 @@ header nav {
 
 .popup-close-button-image:hover {
   opacity: 0.55;
+  cursor: pointer;
 }
 
 .popup-title {
@@ -656,21 +667,21 @@ header nav {
   display: flex;
   gap: 2%;
   height: fit-content;
-  
+
   justify-content: space-evenly;
 }
 
 .popup-metric-item {
   border: dashed;
   border-radius: 10px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2%;
   gap: 10px;
   min-height: 100%;
-  
+
 }
 
 /* .popup-metrics-container {
