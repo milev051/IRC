@@ -1,8 +1,21 @@
+function scrollToo(section) {
+  let gap = 0;
+  if (window.screen.availWidth > 900) {
+    gap = -150;
+  }
+  else {
+    gap = -50;
+  }
+  closeMenu();
+  window.scrollTo(0, gap + window.scrollY + document.getElementById(section).children[0].getBoundingClientRect().y);
+}
+
 // Hamburger Menu
 var menu = document.getElementById("header-menu2");
 var logo = document.getElementById("header-logo");
 var hamburger = document.getElementById("header-hamburger-icon");
 var header = document.getElementsByTagName("header")[0];
+var updated_header_color = document.getElementsByTagName("header").color;
 function toggleMenu() {
   if (menu.style.display === "flex") {
     closeMenu();
@@ -14,13 +27,15 @@ function closeMenu() {
   menu.style.display = "none";
   logo.src = "img/icon-irc-white.png";
   hamburger.src = "img/icon-hamburger.png"
-  header.style.backgroundColor = "#transparent";
+  header.style.backgroundColor = updated_header_color;
+  document.getElementsByTagName("html")[0].style.overflowY = "scroll"
 }
 function openMenu() {
   menu.style.display = "flex";
   logo.src = "img/icon-irc.png";
   hamburger.src = "img/icon-close-button.png"
   header.style.backgroundColor = "white";
+  document.getElementsByTagName("html")[0].style.overflowY = "hidden"
 }
 window.addEventListener('resize', closeMenu);
 
@@ -29,16 +44,29 @@ window.addEventListener('resize', closeMenu);
 function showPopup(popupId) {
   document.getElementsByTagName("html")[0].style.overflowY = "hidden"
   document.getElementById(popupId).style.display = "flex";
+
+  // document.getElementById(popupId).style.opacity = 0;
+  // setTimeout(function () {
+  //   document.getElementById(popupId).style.opacity = 1;
+  // }, 100);
 }
 function closePopup(popupId) {
   document.getElementsByTagName("html")[0].style.overflowY = "scroll"
   document.getElementById(popupId).style.display = "none";
+
+  // setTimeout(function () {
+  //   document.getElementById(popupId).style.opacity = 0;
+  // }, 100);
+  // setInterval(function () {
+  //   document.getElementById(popupId).style.display = "none";
+  // }, 100);
 }
 
 // Projects
 
 projects = [
   {},
+  // 1
   {
     title: 'RiseUp! razvojni program',
     subtitle: 'oktobar 2022 - jun 2023',
@@ -50,72 +78,7 @@ projects = [
     color: "84d4fc",
     filter: "brightness(0) saturate(100%) invert(69%) sepia(47%) saturate(404%) hue-rotate(165deg) brightness(105%) contrast(98%)"
   },
-  {
-    title: 'Route2Launch program',
-    subtitle: '___',
-    description: 'Startap mentorski program koji omogućava kontinuirano mentorstvo s ciljem testiranja startup ideje, razvoj skalabilnog biznis modela, podršku u izradi MVP verzije proizvoda, priliku za networking i prve investicije, kao i prostor za zajednički rad i druženje. Mentori na programu su obučeni nastavnici i saradnici FON-a u saradnji sa ekspertima iz startap ekosistema, a dodatnu podršku u razvoju prve verzije proizvoda obezbedila je partnerska kompanija FON-a, 30 Hills. “Route2Launch” program deo je projekta Preduzmi ideju koji FON realizuje sa Inicijativom Digitalna Srbija i partnerskim organizacijama iz startap ekosistema, a uz podršku USAID-a.',
-    metric: ['7', '42', '93,3'],
-    matricDescription: ['Broj fakulteta', 'Broj učesnika', 'Net promoter score'],
-    partners: ['Inicijativa Digitalna Srbija', 'USAID', '30Hills'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2023/03/otvorene-prijave-za-route2launch2-startap-mentorski-program/',
-    color: "34344c",
-    filter: "brightness(0) saturate(100%) invert(19%) sepia(58%) saturate(4023%) hue-rotate(327deg) brightness(93%) contrast(101%)"
-  },
-  {
-    title: 'Expert2Mentors#2 trening program',
-    subtitle: 'maj-jun 2023',
-    description: 'Trening program za nastavnike i saradnike fakulteta Univerziteta u Beogradu koji ima za cilj unapređenje mentorskih veština za rad sa studentskim startap timovima. Sa polaznicima programa su kroz ekspertske sesije radili eksperti iz domaćeg i stranih startup ekosistema. Trening program deo je projekta Preduzmi ideju koji FON realizuje sa Inicijativom Digitalna Srbija i partnerskim organizacijama iz startap ekosistema, a uz podršku USAID-a.',
-    metric: ['6', '26', '8'],
-    matricDescription: ['Broj fakulteta', 'Broj polaznika', 'Broj predavača'],
-    partners: ['Inicijativa Digitalna Srbija', 'USAID'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2023/06/uspesno-zavrsen-drugi-ciklus-expert2mentors-trening-programa-za-unapredjenja-startap-mentorskih-vestina-nastavnika/',
-    color: "dc1c4c",
-    filter: "brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(4527%) hue-rotate(337deg) brightness(90%) contrast(90%)"
-  },
-  {
-    title: 'Nedelja studentskih ideja',
-    subtitle: 'decembar 2022',
-    description: 'Trodnevni događaj namenjen popularizaciji preduzetništva i razvoja studentskih startap ideja. Nedelja studentskih ideja održava se u okviru projekta “Preduzmi ideju” koji FON realizuje sa Inicijativom Digitalna Srbija i partnerima, a uz podršku USAID-a.',
-    metric: ['17', '112'],
-    matricDescription: ['Broj kolaboratora i predavača', 'Broj učesnika'],
-    partners: [],
-    buttonLink: 'https://www.linkedin.com/posts/faculty-of-organizational-sciences_nsi22-nedeljastudenstkihideja-preduzmiideju-activity-7010923555089461248--xg5/?utm_source=share&utm_medium=member_desktop',
-    color: "dc1c4c",
-    filter: "brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(4527%) hue-rotate(337deg) brightness(90%) contrast(90%)"
-  },
-  {
-    title: 'Skyrocket Account Management Academy',
-    subtitle: 'mart-april 2023',
-    description: 'Account Management Akademija namenjena studentima osnovnih i master studija radi edukacije u oblastima account management-a, project panagement-a, marketinga i finansija. Kroz niz interaktivnih radionica i zadataka, polaznici su pripremani za poziciju Account Manager-a.',
-    metric: ['15', '100'],
-    matricDescription: ['Broj učesnika', 'Net promoter score'],
-    partners: ['CodeIT', 'GrowIt Agile'],
-    buttonLink: 'https://www.sama.edu.rs',
-    color: "5c54fc",
-    filter: "brightness(0) saturate(100%) invert(38%) sepia(73%) saturate(5770%) hue-rotate(235deg) brightness(101%) contrast(98%)"
-  },
-  {
-    title: 'Florence Days',
-    subtitle: 'maj 2023',
-    description: 'Niz radionica u saradnji sa kompanijom Florence podeljenih na dve tematske celine: “Kompanijska kultura” i “Priprema za tehnički deo intervjua za poziciju Software Developer-a”.',
-    metric: ['14'],
-    matricDescription: ['Broj učesnika'],
-    partners: ['Florence'],
-    buttonLink: 'https://www.instagram.com/p/Cs3hnmqMF1p/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==',
-    color: "5c54fc",
-    filter: "brightness(0) saturate(100%) invert(38%) sepia(73%) saturate(5770%) hue-rotate(235deg) brightness(101%) contrast(98%)"
-  },
-  {
-    title: 'Rénovation Retail Case Challenge',
-    subtitle: 'maj 2023',
-    description: 'Takmičenje na kome su studentski timovi dali rešenje na izazove u retail industriji nastalih usled promene šoping kulture. Pored takmičarskog dela je organizovan i jednodnevni trening na kome su prijavljeni timovi dobili znanja i veštine potrebne za rešavanje studije slučaja. Za najbolje timove i prezentera su obezbeđene nagrade. Prvi “rénovation” case challenge organizovan je u saradnji sa kompanijom MPC Properties, u okviru projekta “Preduzmi ideju”.',
-    metric: ['4', '28'],
-    matricDescription: ['Broj fakulteta', 'Broj učesnika'],
-    partners: ['MPC Properties'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2023/05/studenti-predlozili-unapredjenje-soping-iskustva-u-mpc-properties-trznim-centrima-na-prvom-renovation-case-challenge-u/',
-    color: "e46414",
-    filter: "brightness(0) saturate(100%) invert(61%) sepia(55%) saturate(6382%) hue-rotate(357deg) brightness(96%) contrast(87%)"
-  },
+  // 2
   {
     title: 'Endava Training Program',
     subtitle: 'mart 2023',
@@ -127,72 +90,19 @@ projects = [
     color: "e46414",
     filter: "brightness(0) saturate(100%) invert(61%) sepia(55%) saturate(6382%) hue-rotate(357deg) brightness(96%) contrast(87%)"
   },
+  // 3
   {
-    title: 'ERP Akademija',
-    subtitle: 'april-jun 2023',
-    description: 'ERP Akademija je program namenjen studentima završnih godina i master studija za edukaciju o najsavremenijim tehnologijama u primeni ERP sistema. Akademija obuhvata obuku o ulozi F&O konsultanta, procesima migracije podataka i projektnom menadžmentu, pružajući studentima praktične veštine i znanja neophodna za uspešnu karijeru u ovoj oblasti.',
-    metric: ['27', '80'],
-    matricDescription: ['Broj učesnika', 'Net promoter score'],
-    partners: ['Sa.Global'],
-    buttonLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7071934116937539584/',
-    color: "e46414",
-    filter: "brightness(0) saturate(100%) invert(61%) sepia(55%) saturate(6382%) hue-rotate(357deg) brightness(96%) contrast(87%)"
+    title: 'Route2Launch program',
+    subtitle: 'prvi ciklus jul-decembar 2022, drugi ciklus mart-jul 2023',
+    description: 'Startap mentorski program koji omogućava kontinuirano mentorstvo s ciljem testiranja startup ideje, razvoj skalabilnog biznis modela, podršku u izradi MVP verzije proizvoda, priliku za networking i prve investicije, kao i prostor za zajednički rad i druženje. Mentori na programu su obučeni nastavnici i saradnici FON-a u saradnji sa ekspertima iz startap ekosistema, a dodatnu podršku u razvoju prve verzije proizvoda obezbedila je partnerska kompanija FON-a, 30 Hills. “Route2Launch” program deo je projekta Preduzmi ideju koji FON realizuje sa Inicijativom Digitalna Srbija i partnerskim organizacijama iz startap ekosistema, a uz podršku USAID-a.',
+    metric: ['7', '42', '93,3'],
+    matricDescription: ['Broj fakulteta', 'Broj učesnika', 'Net promoter score'],
+    partners: ['Inicijativa Digitalna Srbija', 'USAID', '30Hills'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2023/03/otvorene-prijave-za-route2launch2-startap-mentorski-program/',
+    color: "34344c",
+    filter: "brightness(0) saturate(100%) invert(19%) sepia(58%) saturate(4023%) hue-rotate(327deg) brightness(93%) contrast(101%)"
   },
-  {
-    title: 'OTP Youth Hub',
-    subtitle: 'mart-april 2023',
-    description: 'OTP Youth Hub je niz radionica na kojima su studenti imali priliku da ovladaju metodologijom Design Thinking-a, osnovama Data Science-a, veštinama kreiranja digitalnih proizvoda, osnovama digitalnog marketinga i načinom na koji se danas ove metodologije koriste za kreiranje finansijskih proizvoda u bankarstvu.',
-    metric: ['46'],
-    matricDescription: ['Broj učesnika'],
-    partners: ['OTP Banka'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2023/02/prijavi-se-za-otp-youth-hub-trening-program-koji-organizuje-otp-banka/',
-    color: "045434",
-    filter: "brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(6102%) hue-rotate(128deg) brightness(93%) contrast(97%)"
-  },
-  {
-    title: 'Humanitarni projekat: EmpowerIT',
-    subtitle: 'septembar 2022-januar 2023.',
-    description: 'Empower IT izazov je takmičenje studentskih timova u kreiranju rešenja koja mogu unaprediti i pomoći rad Centra za integraciju mladih (Svratište za decu, Beograd). Studentski timovi su imali priliku da kreiraju inovativno idejno IT rešenje na zadati izazov, uz učenje i rad sa mentorima partnera projekta u oblasti IT, finansija i pravnih aspekata.',
-    metric: ['9'],
-    matricDescription: ['Broj učesnika'],
-    partners: ['Manpower Srbija'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2022/09/empower-it-humanitarni-it-izazov-za-studente-uz-nagradu-za-najbolji-tim/',
-    color: "fc9404",
-    filter: "brightness(0) saturate(100%) invert(73%) sepia(40%) saturate(6182%) hue-rotate(360deg) brightness(103%) contrast(98%)"
-  },
-  {
-    title: 'Open Data takmičenje',
-    subtitle: 'oktobar-decembar 2022',
-    description: 'Studentsko takmičenje u oblasti otvorenih podataka organizovano u saradnji sa konsultantskom kompanijom Egzakta Advisory. Kroz dva kruga takmičenja, timovi su, uz podršku mentora, dali rešenje na definisane zadatke od strane kompanije, a za tri najbolja tima su obezbeđene nagrade.',
-    metric: ['6', '64'],
-    matricDescription: ['Broj fakulteta', 'Broj učesnika'],
-    partners: ['Egzakta Advisory'],
-    buttonLink: 'http://www.fon.bg.ac.rs/2022/10/otvoreni-podaci-info-dan-i-studentsko-takmicenje-u-saradanji-sa-kompanijom-egzakta-advisory/',
-    color: "bb9d64",
-    filter: "brightness(0) saturate(100%) invert(60%) sepia(64%) saturate(272%) hue-rotate(1deg) brightness(94%) contrast(83%)"
-  },
-  {
-    title: 'Predavanje: Gde žive podaci',
-    subtitle: 'novembar 2022',
-    description: 'Radionica “Gde žive podaci” je organizovana na temu tvorenih podataka u saradnji sa Kancelarijom za IT i E-upravu, a uz podršku Programa Ujedinjenih nacija za razvoj. Studenti su imali priliku da se upoznaju sa konceptom open data-e i saznaju gde sve mogu da ih pronađu i kako da ih iskoriste.',
-    metric: ['83'],
-    matricDescription: ['Broj učesnika'],
-    partners: ['Kancelarija za IT i eUPRAVU', 'UNDP'],
-    buttonLink: 'https://www.instagram.com/p/CkyDt2jqPk2/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==',
-    color: "0d2c44",
-    filter: "brightness(0) saturate(100%) invert(13%) sepia(9%) saturate(6597%) hue-rotate(174deg) brightness(94%) contrast(94%)"
-  },
-  {
-    title: 'International Programming Contest',
-    subtitle: 'novembar 2022',
-    description: 'Proggy-Buggy internacionalno takmičenje u programiranju okupilo je studente koji su se prijavili kako individualno, tako i u timovima, kako bi testirali svoje veštine i takmičili se u programiranju. Cilj takmičenja bio je rešiti 13 različitih zadataka za 42 minuta, a učesnici su imali priliku da pokažu svoje programerske veštine i kreativnost u rešavanju složenih problema.',
-    metric: ['6'],
-    matricDescription: ['Broj učesnika'],
-    partners: ['Data Art'],
-    buttonLink: 'https://www.instagram.com/p/Ckf60xdKiEF/',
-    color: "74549c",
-    filter: "brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(4253%) hue-rotate(224deg) brightness(92%) contrast(81%)"
-  },
+  // 4
   {
     title: 'Inicijativa FON Ideje',
     subtitle: 'maj-decembar 2023',
@@ -204,6 +114,127 @@ projects = [
     color: "795a45",
     filter: "brightness(0) saturate(100%) invert(37%) sepia(32%) saturate(472%) hue-rotate(341deg) brightness(93%) contrast(92%)"
   },
+  // 5
+  {
+    title: 'Skyrocket Account Management Academy',
+    subtitle: 'mart-april 2023',
+    description: 'Account Management Akademija namenjena studentima osnovnih i master studija radi edukacije u oblastima account management-a, project panagement-a, marketinga i finansija. Kroz niz interaktivnih radionica i zadataka, polaznici su pripremani za poziciju Account Manager-a.',
+    metric: ['15', '100'],
+    matricDescription: ['Broj učesnika', 'Net promoter score'],
+    partners: ['CodeIT', 'GrowIt Agile'],
+    buttonLink: 'https://www.sama.edu.rs',
+    color: "5c54fc",
+    filter: "brightness(0) saturate(100%) invert(38%) sepia(73%) saturate(5770%) hue-rotate(235deg) brightness(101%) contrast(98%)"
+  },
+  // 6
+  {
+    title: 'ERP Akademija',
+    subtitle: 'april-jun 2023',
+    description: 'ERP Akademija je program namenjen studentima završnih godina i master studija za edukaciju o najsavremenijim tehnologijama u primeni ERP sistema. Akademija obuhvata obuku o ulozi F&O konsultanta, procesima migracije podataka i projektnom menadžmentu, pružajući studentima praktične veštine i znanja neophodna za uspešnu karijeru u ovoj oblasti.',
+    metric: ['27', '80'],
+    matricDescription: ['Broj učesnika', 'Net promoter score'],
+    partners: ['Sa.Global'],
+    buttonLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7071934116937539584/',
+    color: "e46414",
+    filter: "brightness(0) saturate(100%) invert(61%) sepia(55%) saturate(6382%) hue-rotate(357deg) brightness(96%) contrast(87%)"
+  },
+  // 7
+  {
+    title: 'Expert2Mentors trening program',
+    subtitle: 'maj-jun 2023',
+    description: 'Trening program za nastavnike i saradnike fakulteta Univerziteta u Beogradu koji ima za cilj unapređenje mentorskih veština za rad sa studentskim startap timovima. Sa polaznicima programa su kroz ekspertske sesije radili eksperti iz domaćeg i stranih startup ekosistema. Trening program deo je projekta Preduzmi ideju koji FON realizuje sa Inicijativom Digitalna Srbija i partnerskim organizacijama iz startap ekosistema, a uz podršku USAID-a.',
+    metric: ['6', '26', '8'],
+    matricDescription: ['Broj fakulteta', 'Broj polaznika', 'Broj predavača'],
+    partners: ['Inicijativa Digitalna Srbija', 'USAID'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2023/06/uspesno-zavrsen-drugi-ciklus-expert2mentors-trening-programa-za-unapredjenja-startap-mentorskih-vestina-nastavnika/',
+    color: "dc1c4c",
+    filter: "brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(4527%) hue-rotate(337deg) brightness(90%) contrast(90%)"
+  },
+  // 8
+  {
+    title: 'Florence Days',
+    subtitle: 'maj 2023',
+    description: 'Niz radionica u saradnji sa kompanijom Florence podeljenih na dve tematske celine: “Kompanijska kultura” i “Priprema za tehnički deo intervjua za poziciju Software Developer-a”.',
+    metric: ['14'],
+    matricDescription: ['Broj učesnika'],
+    partners: ['Florence'],
+    buttonLink: 'https://www.instagram.com/p/Cs3hnmqMF1p/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==',
+    color: "5c54fc",
+    filter: "brightness(0) saturate(100%) invert(38%) sepia(73%) saturate(5770%) hue-rotate(235deg) brightness(101%) contrast(98%)"
+  },
+  // 9
+  {
+    title: 'Open Data takmičenje',
+    subtitle: 'oktobar-decembar 2022',
+    description: 'Studentsko takmičenje u oblasti otvorenih podataka organizovano u saradnji sa konsultantskom kompanijom Egzakta Advisory. Kroz dva kruga takmičenja, timovi su, uz podršku mentora, dali rešenje na definisane zadatke od strane kompanije, a za tri najbolja tima su obezbeđene nagrade.',
+    metric: ['6', '64'],
+    matricDescription: ['Broj fakulteta', 'Broj učesnika'],
+    partners: ['Egzakta Advisory'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2022/10/otvoreni-podaci-info-dan-i-studentsko-takmicenje-u-saradanji-sa-kompanijom-egzakta-advisory/',
+    color: "bb9d64",
+    filter: "brightness(0) saturate(100%) invert(60%) sepia(64%) saturate(272%) hue-rotate(1deg) brightness(94%) contrast(83%)"
+  },
+  // 10
+  {
+    title: 'Rénovation Retail Case Challenge',
+    subtitle: 'maj 2023',
+    description: 'Takmičenje na kome su studentski timovi dali rešenje na izazove u retail industriji nastalih usled promene šoping kulture. Pored takmičarskog dela je organizovan i jednodnevni trening na kome su prijavljeni timovi dobili znanja i veštine potrebne za rešavanje studije slučaja. Za najbolje timove i prezentera su obezbeđene nagrade. Prvi “rénovation” case challenge organizovan je u saradnji sa kompanijom MPC Properties, u okviru projekta “Preduzmi ideju”.',
+    metric: ['4', '28'],
+    matricDescription: ['Broj fakulteta', 'Broj učesnika'],
+    partners: ['MPC Properties'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2023/05/studenti-predlozili-unapredjenje-soping-iskustva-u-mpc-properties-trznim-centrima-na-prvom-renovation-case-challenge-u/',
+    color: "e46414",
+    filter: "brightness(0) saturate(100%) invert(61%) sepia(55%) saturate(6382%) hue-rotate(357deg) brightness(96%) contrast(87%)"
+  },
+  // 11
+  {
+    title: 'OTP Youth Hub',
+    subtitle: 'mart-april 2023',
+    description: 'OTP Youth Hub je niz radionica na kojima su studenti imali priliku da ovladaju metodologijom Design Thinking-a, osnovama Data Science-a, veštinama kreiranja digitalnih proizvoda, osnovama digitalnog marketinga i načinom na koji se danas ove metodologije koriste za kreiranje finansijskih proizvoda u bankarstvu.',
+    metric: ['46'],
+    matricDescription: ['Broj učesnika'],
+    partners: ['OTP Banka'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2023/02/prijavi-se-za-otp-youth-hub-trening-program-koji-organizuje-otp-banka/',
+    color: "045434",
+    filter: "brightness(0) saturate(100%) invert(22%) sepia(14%) saturate(6102%) hue-rotate(128deg) brightness(93%) contrast(97%)"
+  },
+  // 12
+  {
+    title: 'Humanitarni projekat: EmpowerIT',
+    subtitle: 'septembar 2022-januar 2023.',
+    description: 'Empower IT izazov je takmičenje studentskih timova u kreiranju rešenja koja mogu unaprediti i pomoći rad Centra za integraciju mladih (Svratište za decu, Beograd). Studentski timovi su imali priliku da kreiraju inovativno idejno IT rešenje na zadati izazov, uz učenje i rad sa mentorima partnera projekta u oblasti IT, finansija i pravnih aspekata.',
+    metric: ['9'],
+    matricDescription: ['Broj učesnika'],
+    partners: ['Manpower Srbija'],
+    buttonLink: 'http://www.fon.bg.ac.rs/2022/09/empower-it-humanitarni-it-izazov-za-studente-uz-nagradu-za-najbolji-tim/',
+    color: "fc9404",
+    filter: "brightness(0) saturate(100%) invert(73%) sepia(40%) saturate(6182%) hue-rotate(360deg) brightness(103%) contrast(98%)"
+  },
+  // 13
+  {
+    title: 'Predavanje: Gde žive podaci',
+    subtitle: 'novembar 2022',
+    description: 'Radionica “Gde žive podaci” je organizovana na temu tvorenih podataka u saradnji sa Kancelarijom za IT i E-upravu, a uz podršku Programa Ujedinjenih nacija za razvoj. Studenti su imali priliku da se upoznaju sa konceptom open data-e i saznaju gde sve mogu da ih pronađu i kako da ih iskoriste.',
+    metric: ['83'],
+    matricDescription: ['Broj učesnika'],
+    partners: ['Kancelarija za IT i eUPRAVU', 'UNDP'],
+    buttonLink: 'https://www.instagram.com/p/CkyDt2jqPk2/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg==',
+    color: "0d2c44",
+    filter: "brightness(0) saturate(100%) invert(13%) sepia(9%) saturate(6597%) hue-rotate(174deg) brightness(94%) contrast(94%)"
+  },
+  // 14
+  {
+    title: 'International Programming Contest',
+    subtitle: 'novembar 2022',
+    description: 'Proggy-Buggy internacionalno takmičenje u programiranju okupilo je studente koji su se prijavili kako individualno, tako i u timovima, kako bi testirali svoje veštine i takmičili se u programiranju. Cilj takmičenja bio je rešiti 13 različitih zadataka za 42 minuta, a učesnici su imali priliku da pokažu svoje programerske veštine i kreativnost u rešavanju složenih problema.',
+    metric: ['6'],
+    matricDescription: ['Broj učesnika'],
+    partners: ['Data Art'],
+    buttonLink: 'https://www.instagram.com/p/Ckf60xdKiEF/',
+    color: "74549c",
+    filter: "brightness(0) saturate(100%) invert(37%) sepia(7%) saturate(4253%) hue-rotate(224deg) brightness(92%) contrast(81%)"
+  },
+  // 15
   {
     title: 'Interni razvoj i deljenje znanja',
     subtitle: 'maj-jun 2023',
@@ -215,6 +246,7 @@ projects = [
     color: "15446c",
     filter: "brightness(0) saturate(100%) invert(18%) sepia(75%) saturate(970%) hue-rotate(177deg) brightness(96%) contrast(91%)"
   },
+  // 16
   {
     title: 'Specijalni Startup Pitch Rehearsals',
     subtitle: 'februar-jun 2023',
@@ -225,6 +257,18 @@ projects = [
     buttonLink: '',
     color: "d40c0c",
     filter: "brightness(0) saturate(100%) invert(11%) sepia(71%) saturate(7239%) hue-rotate(358deg) brightness(95%) contrast(96%)"
+  },
+  // 17
+  {
+    title: 'Nedelja studentskih ideja',
+    subtitle: 'decembar 2022',
+    description: 'Trodnevni događaj namenjen popularizaciji preduzetništva i razvoja studentskih startap ideja. Nedelja studentskih ideja održava se u okviru projekta “Preduzmi ideju” koji FON realizuje sa Inicijativom Digitalna Srbija i partnerima, a uz podršku USAID-a.',
+    metric: ['17', '112'],
+    matricDescription: ['Broj kolaboratora i predavača', 'Broj učesnika'],
+    partners: [],
+    buttonLink: 'https://www.linkedin.com/posts/faculty-of-organizational-sciences_nsi22-nedeljastudenstkihideja-preduzmiideju-activity-7010923555089461248--xg5/?utm_source=share&utm_medium=member_desktop',
+    color: "dc1c4c",
+    filter: "brightness(0) saturate(100%) invert(18%) sepia(99%) saturate(4527%) hue-rotate(337deg) brightness(90%) contrast(90%)"
   },
 ]
 
@@ -301,7 +345,7 @@ function returnButtonStrign(i) {
   if (projects[i].buttonLink == '')
     return ''
   else
-    return `<button onclick=" window.open('` + projects[i].buttonLink + `','_blank')" class="popup-button-procitaj-vise" style="background-color: #` + projects[i].color + `;">Pročitaj više o projektu</button>`
+    return `<button onclick=" window.open('` + projects[i].buttonLink + `','_blank')" class="popup-button-procitaj-vise" style="background-color: #` + projects[i].color + `;">Više o projektu</button>`
 }
 
 function createPopupItem(i) {
@@ -351,10 +395,12 @@ window.addEventListener('scroll', function () {
   var color = `rgba(29, 161, 255, ${opacity})`; /* Same color as #1da1ff, but with variable opacity */
 
   if (window.scrollY > 600) {
+    updated_header_color = color;
     header.style.backgroundColor = color;
     this.document.getElementById("header-menu2").style.height = "auto";
     header.classList.add('transparent-header');
   } else {
+    updated_header_color = 'transparent';
     header.style.backgroundColor = 'transparent';
     header.classList.remove('transparent-header');
   }

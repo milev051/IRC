@@ -1,0 +1,205 @@
+@media (max-width: 900px) {
+    .font-break {
+        display: block;
+    }
+
+    #header-logo {
+        width: 40%;
+    }
+
+    #header-menu {
+        display: none;
+    }
+
+
+    #header-menu2 {
+        padding-top: 50px;
+    }
+
+    #header-menu2 a {
+        font-size: 15px;
+        height: 20px;
+    }
+
+    #header-menu2 a:hover {
+        color: #082234;
+        text-shadow: 0 0 20px #082234;
+    }
+
+    #header-hamburger-icon {
+        display: flex;
+        width: 8%;
+    }
+
+    /* --------------------------------------------------- */
+
+    #hero-section {
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        min-height: 700px;
+        padding-top: 50vw;
+    }
+
+    .hero-text {
+        max-width: 80%;
+    }
+
+    .hero-title {
+        font-size: 250%;
+        line-height: 3.25rem;
+        padding-bottom: 5%;
+    }
+
+    .hero-subtitle {
+        font-size: 125%;
+    }
+
+    .hero-metric-img {
+        width: 90vw;
+        margin-bottom: -20px;
+    }
+
+    #project-section {
+        margin-top: 150px;
+        padding: 2.5%;
+    }
+
+    .project-container {
+        row-gap: 8px;
+        column-gap: 2.5%;
+    }
+
+    .project-item {
+        width: 45%;
+        aspect-ratio: 1;
+        padding-bottom: 2%;
+        padding: 2.5%;
+    }
+
+    .project-title {
+        font-size: 90%;
+    }
+
+    #main-team-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main-team-container {
+        gap: 10px;
+    }
+
+    .main-team-item {
+        max-width: 28%;
+    }
+
+    .main-team-description {
+        padding: 10px 5px;
+    }
+
+    .main-team-name {
+        font-size: 14px;
+    }
+
+    .main-team-position {
+        font-size: 7px;
+    }
+
+    #team-section {
+        padding-top: 20%;
+    }
+
+    .team-container {
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    #hero-section {
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        min-height: 700px;
+        padding-top: 30vw;
+    }
+
+    .hero-metric-img {
+        max-width: 95%;
+    }
+
+    #project-section {
+        margin-top: 60px;
+    }
+
+    .project-title {
+        font-size: 70%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

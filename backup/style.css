@@ -1,0 +1,34 @@
+@media  (max-width: 767.98px) or (max-aspect-ratio: 1) {
+
+    #header-logo{
+        width: 25vw;
+    }
+
+    header nav {
+        padding: 4vw 8vw;
+    }
+    
+    #header-menu{
+        display: none;
+    }
+
+    #header-hamburger-icon {
+        display: flex;
+    }
+
+/* --------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

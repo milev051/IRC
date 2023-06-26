@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="img/logo-page.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesMedia.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,18 +18,18 @@
         <nav>
             <img id="header-logo" src="img/icon-irc-white.png" alt="">
             <div id="header-menu">
-                <a href="#project-section">Realizovani projekti</a>
-                <a href="#main-team-section">Tim</a>
-                <a href="#zahvalnost-section">Zahvalnost profesorima</a>
-                <a href="#pertneri-section">Partneri</a>
+                <a onclick="scrollToo('project-section')">Realizovani projekti</a>
+                <a onclick="scrollToo('main-team-section')">Tim</a>
+                <a onclick="scrollToo('zahvalnost-section')">Zahvalnost profesorima</a>
+                <a onclick="scrollToo('pertneri-section')">Partneri</a>
             </div>
             <img id="header-hamburger-icon" src="img/icon-hamburger.png" onclick="toggleMenu()" alt="">
         </nav>
         <div id="header-menu2">
-            <a href="#project-section" onclick="closeMenu()">Realizovani projekti</a>
-            <a href="#main-team-section" onclick="closeMenu()">Tim</a>
-            <a href="#zahvalnost-section" onclick="closeMenu()">Zahvalnost profesorima</a>
-            <a href="#pertneri-section" onclick="closeMenu()">Partneri</a>
+            <a onclick="scrollToo('project-section')">Realizovani projekti</a>
+            <a onclick="scrollToo('main-team-section')">Tim</a>
+            <a onclick="scrollToo('zahvalnost-section')">Zahvalnost profesorima</a>
+            <a onclick="scrollToo('pertneri-section')">Partneri</a>
         </div>
     </header>
 
@@ -44,6 +45,7 @@
     </section>
 
     <section id="project-section">
+        <hr>
         <h1>Realizovani projekti </h1>
         <h2>u školskoj 2022/23. godini</h2>
         <div class="project-container">
@@ -51,12 +53,13 @@
     </section>
 
     <section id="main-team-section">
+        <hr>
         <h1>Tim</h1>
         <h2>IRC-a</h2>
         <div class="main-team-container">
 
             <div class="main-team-item">
-                <img class="main-team-image" src="">
+                <img class="main-team-image" src="img/team/Ana Milicevic.jpg">
                 <div class="main-team-description">
                     <p class="main-team-name">Ana <br class="font-break">Miličević</p>
                     <p class="main-team-position">PROGRAM MENADŽERKA IRC-A</p>
@@ -72,7 +75,7 @@
             </div>
 
             <div class="main-team-item">
-                <img class="main-team-image" src="">
+                <img class="main-team-image" src="img/team/Tamara Đerić.jpg">
                 <div class="main-team-description">
                     <p class="main-team-name">Tamara <br class="font-break">Đerić</p>
                     <p class="main-team-position">PROJEKTNA KOORDINATORKA</p>
@@ -83,9 +86,12 @@
     </section>
 
     <section id="team-section">
+        <hr>
+        <h1>Angažovani</h1>
+        <h2>studenti FON-a</h2>
         <div class="team-container">
             <div class="team-item">
-                <img class="team-image" src="">
+                <img class="team-image" src="img/team/Aleksa Đurić.jpg">
                 <div class="team-description">
                     <p class="team-name">Aleksa Đurić</p>
                     <p class="team-position">Programer</p>
@@ -141,7 +147,7 @@
                 </div>
             </div>
             <div class="team-item">
-                <img class="team-image" src="">
+                <img class="team-image" src="img/team/Milica Prica.jpg">
                 <div class="team-description">
                     <p class="team-name">Milica Prica</p>
                     <p class="team-position">Dizajnerka</p>
