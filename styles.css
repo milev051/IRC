@@ -277,7 +277,6 @@ header nav {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 30px;
-
 }
 
 .main-team-item {
@@ -397,8 +396,9 @@ header nav {
   overflow: auto;
 
   padding: 2.5%;
-  max-width: 75%;
+  max-width: 95%;
   max-height: 95%;
+  width: 75%;
 }
 
 .popup-dim {
@@ -417,10 +417,16 @@ header nav {
   justify-content: end;
 }
 
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .popup-close-button-image {
-  width: 2vw;
-  height: 2vw;
-  padding: 0.01vw;
+  width: 2.25vw;
+  height: 2.25vw;
+  margin-left: 4vw;
+  margin-bottom: 0.5vw;
 }
 
 .popup-close-button-image:hover {
@@ -432,14 +438,13 @@ header nav {
   font-size: 36px;
   font-weight: 600;
   text-align: left;
-  margin-bottom: 0.5vw;
 }
 
 .popup-subtitle {
   font-size: 24px;
   font-weight: 600;
   text-align: left;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 
 .popup-paragraph {
@@ -447,7 +452,7 @@ header nav {
   font-weight: 400;
   line-height: 25px;
   text-align: justify;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .popup-metrics-container {
@@ -495,41 +500,38 @@ header nav {
   justify-self: end;
 }
 
-.popup-footer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .popup-container-partneri {
-  max-width: 70%;
+  margin-bottom: 15px;
 }
 
 .popup-title-partneri {
   font-size: 24px;
   font-weight: 400;
   text-align: left;
+  margin-bottom: 5px;
+}
+
+.popup-partneri-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .popup-partner {
   font-size: 21px;
   font-weight: 400;
   text-align: left;
-}
-
-.popup-partner b {
-  color: var(--Light);
+  margin-bottom: 5px;
 }
 
 .popup-button-procitaj-vise {
   font-weight: 400;
   text-align: center;
-  align-self: flex-end;
-  justify-self: flex-end;
+  align-self: center;
   border-color: transparent;
   width: fit-content;
   color: white;
-  padding: 1.25%;
+  padding: 1.5% 3%;
   font-size: 21px;
   border-radius: 10px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);

@@ -4,7 +4,7 @@ function scrollToo(section) {
     gap = -180;
   }
   else {
-    gap = -80;
+    gap = -130;
   }
   closeMenu();
   let childElement = document.getElementById(section).children[0];
@@ -72,7 +72,7 @@ projects = [
   // 1
   {
     title: 'RiseUp! razvojni program',
-    subtitle: 'oktobar 2022 - jun 2023',
+    subtitle: 'okt 2022 - jun 2023',
     description: 'Zvaničan razvojni program IRC-a namenjen studentima osnovih i master studija. Program ima za cilj unapređenje znanja studenata, sticanje veština i iskustva u 11 različitih menadžment i IT oblasti, kao i razvoj studentskih tech i biznis ideja. Aktivnosti u okviru RiseUp! razvojnog programa organizovane su kroz tri nivoa: Enrolment, Capacity Building i Ready to Go! nivo.',
     metric: ['281', '17'],
     matricDescription: ['Broj učesnika', 'Broj predavača'],
@@ -96,7 +96,7 @@ projects = [
   // 3
   {
     title: 'Route2Launch program',
-    subtitle: 'prvi ciklus jul-decembar 2022, drugi ciklus mart-jul 2023',
+    subtitle: 'prvi ciklus jul-dec 2022, drugi ciklus mart-jul 2023',
     description: 'Startap mentorski program koji omogućava kontinuirano mentorstvo s ciljem testiranja startup ideje, razvoj skalabilnog biznis modela, podršku u izradi MVP verzije proizvoda, priliku za networking i prve investicije, kao i prostor za zajednički rad i druženje. Mentori na programu su obučeni nastavnici i saradnici FON-a u saradnji sa ekspertima iz startap ekosistema, a dodatnu podršku u razvoju prve verzije proizvoda obezbedila je partnerska kompanija FON-a, 30 Hills. “Route2Launch” program deo je projekta Preduzmi ideju koji FON realizuje sa Inicijativom Digitalna Srbija i partnerskim organizacijama iz startap ekosistema, a uz podršku USAID-a.',
     metric: ['7', '42', '93,3'],
     matricDescription: ['Broj fakulteta', 'Broj učesnika', 'Net promoter score'],
@@ -108,7 +108,7 @@ projects = [
   // 4
   {
     title: 'Inicijativa FON Ideje',
-    subtitle: 'maj-decembar 2023',
+    subtitle: 'maj-dec 2023',
     description: '„FON Ideje – podrška projektima zaposlenih FON-a“ je inicijativa koja ima za cilj motivaciju i podsticanje zaposlenih na davanje doprinosa pozitivnim promenama u okviru određene od oblasti ili procesa rada na Fakultetu. Timovi zaposlenih nastavnika i saradnika na FON-u prezentovali su rukovodstvu i predstavnicima eksternih partnera predloge projekata za unapređenje rada Fakulteta.',
     metric: ['12'],
     matricDescription: ['Broj timova'],
@@ -168,7 +168,7 @@ projects = [
   // 9
   {
     title: 'Open Data takmičenje',
-    subtitle: 'oktobar-decembar 2022',
+    subtitle: 'okt-dec 2022',
     description: 'Studentsko takmičenje u oblasti otvorenih podataka organizovano u saradnji sa konsultantskom kompanijom Egzakta Advisory. Kroz dva kruga takmičenja, timovi su, uz podršku mentora, dali rešenje na definisane zadatke od strane kompanije, a za tri najbolja tima su obezbeđene nagrade.',
     metric: ['6', '64'],
     matricDescription: ['Broj fakulteta', 'Broj učesnika'],
@@ -204,7 +204,7 @@ projects = [
   // 12
   {
     title: 'Humanitarni projekat: EmpowerIT',
-    subtitle: 'septembar 2022-januar 2023.',
+    subtitle: 'sept 2022 - jan 2023',
     description: 'Empower IT izazov je takmičenje studentskih timova u kreiranju rešenja koja mogu unaprediti i pomoći rad Centra za integraciju mladih (Svratište za decu, Beograd). Studentski timovi su imali priliku da kreiraju inovativno idejno IT rešenje na zadati izazov, uz učenje i rad sa mentorima partnera projekta u oblasti IT, finansija i pravnih aspekata.',
     metric: ['9'],
     matricDescription: ['Broj učesnika'],
@@ -252,7 +252,7 @@ projects = [
   // 16
   {
     title: 'Specijalni Startup Pitch Rehearsals',
-    subtitle: 'februar-jun 2023',
+    subtitle: 'feb-jun 2023',
     description: 'Probne prezentacije timova i timskih rešenja kao priprema za apliciranje na programe i projekte podrške, poput Circle U, FON Fazon Eko-challenge. Pored studenata FON-a, svoje probne prezentacije su izneli i preporučeni eksterni timovi.',
     metric: ['48'],
     matricDescription: ['Broj učesnika'],
@@ -283,11 +283,13 @@ function returnPartnerString(i) {
       `
         <div class="popup-container-partneri">
           <div class="popup-title-partneri">Partneri:</div>\n
+          <div class="popup-partneri-container">
       `
     for (let j = 0; j < projects[i].partners.length; j++) {
-      finalPartnerString = finalPartnerString + '<div class="popup-partner"><b>•</b> ' + projects[i].partners[j] + '</div>\n'
+      finalPartnerString = finalPartnerString + '<div class="popup-partner"><b style="color: #' + projects[i].color + ';">•</b> ' + projects[i].partners[j] + '</div>\n'
     }
-    finalPartnerString = finalPartnerString + '\n</div>'
+    
+    finalPartnerString = finalPartnerString + '\n</div></div>'
   }
   return finalPartnerString
 }
@@ -357,17 +359,17 @@ function createPopupItem(i) {
     `
       <div class="popup" id="popup`+ i + `">
         <div class="popup-container">
-          <div class="popup-close-button-holder"><img class="popup-close-button-image"
-            src="img/icon-close-button.png" alt="" onclick="closePopup('popup`+ i + `')"></div>
-          <div class="popup-title">`+ projects[i].title + `</div>
+        <div class="popup-header">
+        <div class="popup-title">`+ projects[i].title + `</div>
+        <img class="popup-close-button-image" src="img/icon-close-button.png" alt="" onclick="closePopup('popup`+ i + `')">
+        </div>
+        <br>
           <div class="popup-subtitle">Period održavanja: <d style="color: #`+ projects[i].color + `;">` + projects[i].subtitle + `</d></div>
           <div class="popup-paragraph">`+ projects[i].description + `</div>
           <div class="popup-metrics-container">
           `+ returnCorrectMetricString(i) + `
           </div>
-          <div class="popup-footer">
           `+ returnPartnerString(i) + returnButtonStrign(i) + `
-          </div>
         </div>
         <div class="popup-dim" onclick="closePopup('popup` + i + `')"></div>
       </div>

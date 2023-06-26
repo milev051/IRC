@@ -34,10 +34,10 @@
 
     #hero-section {
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         padding-left: 0;
-        min-height: 700px;
-        padding-top: 50vw;
+        min-height: 170vw;
+        padding-top: 28vw;
     }
 
     .hero-text {
@@ -55,8 +55,8 @@
     }
 
     .hero-metric-img {
-        width: 90vw;
-        margin-bottom: -20px;
+        max-width: 98%;
+        width: 100vw;
     }
 
     #project-section {
@@ -106,7 +106,7 @@
     }
 
     #team-section {
-        padding-top: 20%;
+        padding-top: 10%;
     }
 
     .team-container {
@@ -128,8 +128,8 @@
     }
 
     .popup-container {
-        padding: 5vw;
-        max-width: 95vw;
+        padding: 7vw;
+        width: 95vw;
     }
 
     .popup-close-button-image {
@@ -173,11 +173,12 @@
 
     .popup-button-procitaj-vise {
         font-size: 14px;
-        padding: 2%;
+        padding: 2.5%;
+        margin-bottom: 4%;
     }
 
     #zahvalnost-section p {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 24px;
     }
 
@@ -228,20 +229,8 @@
         font-size: 14px;
     }
 
-    #hero-section {
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 0;
-        min-height: 700px;
-        padding-top: 30vw;
-    }
-
-    .hero-metric-img {
-        max-width: 95%;
-    }
-
     #project-section {
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .project-title {
