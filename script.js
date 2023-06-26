@@ -1,13 +1,16 @@
 function scrollToo(section) {
   let gap = 0;
   if (window.screen.availWidth > 900) {
-    gap = -150;
+    gap = -180;
   }
   else {
-    gap = -50;
+    gap = -80;
   }
   closeMenu();
-  window.scrollTo(0, gap + window.scrollY + document.getElementById(section).children[0].getBoundingClientRect().y);
+  let childElement = document.getElementById(section).children[0];
+  if (childElement.tagName = 'hr')
+    childElement = document.getElementById(section).children[1];
+  window.scrollTo(0, gap + window.scrollY + childElement.getBoundingClientRect().y);
 }
 
 // Hamburger Menu
@@ -99,7 +102,7 @@ projects = [
     matricDescription: ['Broj fakulteta', 'Broj učesnika', 'Net promoter score'],
     partners: ['Inicijativa Digitalna Srbija', 'USAID', '30Hills'],
     buttonLink: 'http://www.fon.bg.ac.rs/2023/03/otvorene-prijave-za-route2launch2-startap-mentorski-program/',
-    color: "34344c",
+    color: "d41c4c",
     filter: "brightness(0) saturate(100%) invert(19%) sepia(58%) saturate(4023%) hue-rotate(327deg) brightness(93%) contrast(101%)"
   },
   // 4
@@ -362,7 +365,9 @@ function createPopupItem(i) {
           <div class="popup-metrics-container">
           `+ returnCorrectMetricString(i) + `
           </div>
+          <div class="popup-footer">
           `+ returnPartnerString(i) + returnButtonStrign(i) + `
+          </div>
         </div>
         <div class="popup-dim" onclick="closePopup('popup` + i + `')"></div>
       </div>
@@ -391,10 +396,10 @@ for (let i = 1; i <= 17; i++) {
 window.addEventListener('scroll', function () {
   var header = document.getElementsByTagName('header')[0];
 
-  var opacity = Math.min(window.scrollY / 50, 1); /* Change 300 to the scroll amount where you want the transition to be complete */
+  var opacity = Math.min(window.scrollY / 10, 1); /* Change 300 to the scroll amount where you want the transition to be complete */
   var color = `rgba(29, 161, 255, ${opacity})`; /* Same color as #1da1ff, but with variable opacity */
 
-  if (window.scrollY > 600) {
+  if (window.scrollY > 100) {
     updated_header_color = color;
     header.style.backgroundColor = color;
     this.document.getElementById("header-menu2").style.height = "auto";

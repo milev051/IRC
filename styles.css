@@ -3,11 +3,6 @@
   --Dark: #082234;
   --Dark2: #084b7c;
   --Dark-Transparent: #1f1f26bf;
-
-  --h1-font-size: 36px;
-  --h2-font-size: 24px;
-  --h3-font-size: 21px;
-  --h4-font-size: 18px;
 }
 
 * {
@@ -221,17 +216,17 @@ header nav {
   padding: 1.25%;
   padding-bottom: 0.25%;
   transition: box-shadow 0.5s linear;
-  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 2.5px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
 }
 
 .project-item:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 15px 5px #00d9ff7e;
+  box-shadow: 0px 0px 10px 0px #00d9ff7e;
 }
 
 .project-item:hover .project-image {
-  transform: scale(1.05) translate(0, -1.6px);
+  transform: scale(1.025) translate(0, -1.6px);
 }
 
 .project-item:hover .project-title {
@@ -374,7 +369,7 @@ header nav {
 }
 
 .team-position {
-  font-size: 100%;
+  font-size: 80%;
   font-weight: 400;
   color: var(--Dark-Transparent);
   text-transform: uppercase;
@@ -401,8 +396,8 @@ header nav {
   background: white;
   overflow: auto;
 
-  padding: 2%;
-  max-width: 95%;
+  padding: 2.5%;
+  max-width: 75%;
   max-height: 95%;
 }
 
@@ -434,21 +429,21 @@ header nav {
 }
 
 .popup-title {
-  font-size: var(--h1-font-size);
+  font-size: 36px;
   font-weight: 600;
   text-align: left;
   margin-bottom: 0.5vw;
 }
 
 .popup-subtitle {
-  font-size: var(--h2-font-size);
+  font-size: 24px;
   font-weight: 600;
   text-align: left;
   margin-bottom: 2vw;
 }
 
 .popup-paragraph {
-  font-size: var(--h4-font-size);
+  font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   text-align: justify;
@@ -476,7 +471,7 @@ header nav {
 }
 
 .popup-metric-title {
-  font-size: var(--h3-font-size);
+  font-size: 21px;
   font-weight: 600;
   line-height: 22px;
   width: 100%;
@@ -492,7 +487,7 @@ header nav {
 }
 
 .popup-metric-value {
-  font-size: var(--h2-font-size);
+  font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
@@ -500,22 +495,26 @@ header nav {
   justify-self: end;
 }
 
+.popup-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .popup-container-partneri {
-  margin-bottom: 20px;
+  max-width: 70%;
 }
 
 .popup-title-partneri {
-  font-size: var(--h2-font-size);
+  font-size: 24px;
   font-weight: 400;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 .popup-partner {
-  font-size: var(--h3-font-size);
+  font-size: 21px;
   font-weight: 400;
   text-align: left;
-  margin-bottom: 10px;
 }
 
 .popup-partner b {
@@ -526,11 +525,12 @@ header nav {
   font-weight: 400;
   text-align: center;
   align-self: flex-end;
+  justify-self: flex-end;
   border-color: transparent;
   width: fit-content;
   color: white;
   padding: 1.25%;
-  font-size: var(--h3-font-size);
+  font-size: 21px;
   border-radius: 10px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
 }

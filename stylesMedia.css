@@ -1,12 +1,5 @@
 @media (max-width: 900px) {
 
-    :root {
-        --h1-font-size: 18px;
-        --h2-font-size: 16px;
-        --h3-font-size: 14px;
-        --h4-font-size: 12px;
-    }
-
     .font-break {
         display: block;
     }
@@ -136,7 +129,7 @@
 
     .popup-container {
         padding: 5vw;
-        width: 95vw;
+        max-width: 95vw;
     }
 
     .popup-close-button-image {
@@ -144,13 +137,22 @@
         height: 5vw;
     }
 
+    .popup-title {
+        font-size: 20px;
+    }
+
+    .popup-subtitle {
+        font-size: 16px;
+    }
+
     .popup-paragraph {
+        font-size: 14px;
         line-height: 15px;
         margin-bottom: 4vw;
     }
 
     .popup-metric-title {
-        line-height: 15px;
+        font-size: 16px;
     }
 
     .popup-metric-image {
@@ -158,20 +160,20 @@
     }
 
     .popup-metric-value {
-        line-height: 15px;
+        font-size: 18px;
     }
 
     .popup-title-partneri {
-        line-height: 15px;
+        font-size: 20px;
     }
 
     .popup-partner {
-        line-height: 15px;
-        margin-bottom: 5px;
+        font-size: 14px;
     }
 
     .popup-button-procitaj-vise {
-        margin-bottom: 4%;
+        font-size: 14px;
+        padding: 2%;
     }
 
     #zahvalnost-section p {
@@ -217,8 +219,6 @@
 
 
 
-
-
 @media (max-width: 600px) {
     h1 {
         font-size: 24px;
@@ -245,7 +245,7 @@
     }
 
     .project-title {
-        font-size: 70%;
+        font-size: 75%;
     }
 
     .team-name {
