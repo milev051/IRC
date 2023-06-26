@@ -31,8 +31,6 @@
         width: 8%;
     }
 
-    /* --------------------------------------------------- */
-
     #hero-section {
         flex-direction: column;
         justify-content: center;
@@ -115,43 +113,95 @@
         column-gap: 10px;
     }
 
+    .team-item {
+        width: 20%;
+    }
+
+    .team-name {
+        font-size: 12px;
+        padding-top: 0.25rem;
+    }
+
+    .team-position {
+        font-size: 10px;
+    }
+
+    .popup-container {
+        padding: 5vw;
+        width: 95vw;
+    }
+
+    .popup-close-button-image {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .popup-paragraph {
+        line-height: 15px;
+        margin-bottom: 4vw;
+    }
+
+    .popup-metric-title {
+        line-height: 15px;
+    }
+
+    .popup-metric-image {
+        max-height: 30px;
+    }
+
+    .popup-metric-value {
+        line-height: 15px;
+    }
+
+    .popup-title-partneri {
+        line-height: 15px;
+    }
+
+    .popup-partner {
+        line-height: 15px;
+        margin-bottom: 5px;
+    }
+
+    .popup-button-procitaj-vise {
+        margin-bottom: 4%;
+    }
+
+    #zahvalnost-section p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .partneri-container {
+        column-gap: 30px;
+        row-gap: 50px;
+    }
+
+    .partneri-img {
+        max-width: 100px;
+        max-height: 50px;
+    }
+
+    .section-1 {
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 40px;
+        row-gap: 40px;
+    }
+
+    .icon-irc {
+        width: 180px;
+        height: auto;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer p {
+        font-size: 12.8px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -190,16 +240,12 @@
         font-size: 70%;
     }
 
+    .team-name {
+        font-size: 9px;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    .team-position {
+        font-size: 5.8px;
+    }
 
 }

@@ -60,7 +60,6 @@ h1 {
   margin-bottom: 6px;
 }
 
-
 h2 {
   font-size: 18px;
   padding-bottom: 40px;
@@ -79,8 +78,6 @@ hr {
   margin: auto;
   margin-bottom: 2.5rem;
 }
-
-/* --------------------------------------------------- */
 
 header {
   position: fixed;
@@ -144,7 +141,6 @@ header nav {
   background-color: transparent;
   background-color: white;
   overflow: hidden;
-
 }
 
 #header-menu2 a {
@@ -154,15 +150,12 @@ header nav {
   color: #082234cc;
 }
 
-
 #header-hamburger-icon {
   z-index: 6;
   display: none;
   width: 32px;
   height: auto;
 }
-
-/* --------------------------------------------------- */
 
 #hero-section {
   background-image: url("img/hero-bg.png");
@@ -210,8 +203,6 @@ header nav {
   margin-bottom: -7vw;
   transition: 0s;
 }
-
-/* --------------------------------------------------- */
 
 #project-section {
   margin-top: 40px;
@@ -284,8 +275,6 @@ header nav {
   width: 100%;
 }
 
-/* --------------------------------------------------- */
-
 #main-team-section {
   margin-top: 80px;
   padding-top: 40px;
@@ -343,8 +332,6 @@ header nav {
   font-size: 80%;
 }
 
-/* --------------------------------------------------- */
-
 #team-section {
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -357,21 +344,15 @@ header nav {
   justify-content: center;
   row-gap: 40px;
   column-gap: 30px;
-
 }
 
 .team-item {
-  display: flex;20230626_133952
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 15%;
   aspect-ratio: 3/4;
-
-  @media (max-width: 900px) {
-    width: 20%;
-  }
-
 }
 
 .team-image {
@@ -397,15 +378,6 @@ header nav {
   font-weight: 600;
   color: var(--Dark);
   width: 100%;
-
-  @media (max-width: 900px) {
-    font-size: 12px;
-    padding-top: 0.25rem;
-  }
-
-  @media (max-width: 575.98px) {
-    font-size: 9px;
-  }
 }
 
 .team-position {
@@ -414,25 +386,13 @@ header nav {
   color: var(--Dark-Transparent);
   text-transform: uppercase;
   max-width: 100%;
-
-  @media (max-width: 900px) {
-    font-size: 10px;
-  }
-
-  @media (max-width: 575.98px) {
-    font-size: 5.8px;
-  }
 }
-
-/* --------------------------------------------------- */
 
 .popup {
   justify-content: center;
   align-items: center;
-
   display: none;
   position: fixed;
-
   top: 0%;
   left: 0%;
   width: 100%;
@@ -451,11 +411,6 @@ header nav {
   padding: 2%;
   max-width: 95%;
   max-height: 95%;
-
-  @media (max-width: 900px) {
-    padding: 5vw;
-    width: 95vw;
-  }
 }
 
 .popup-dim {
@@ -478,11 +433,6 @@ header nav {
   width: 2vw;
   height: 2vw;
   padding: 0.01vw;
-
-  @media (max-width: 900px) {
-    width: 5vw;
-    height: 5vw;
-  }
 }
 
 .popup-close-button-image:hover {
@@ -510,11 +460,6 @@ header nav {
   line-height: 25px;
   text-align: justify;
   margin-bottom: 40px;
-
-  @media (max-width: 900px) {
-    line-height: 15px;
-    margin-bottom: 4vw;
-  }
 }
 
 .popup-metrics-container {
@@ -522,7 +467,6 @@ header nav {
   display: flex;
   gap: 2%;
   height: fit-content;
-
   justify-content: space-evenly;
 }
 
@@ -536,7 +480,6 @@ header nav {
   padding: 2%;
   gap: 10px;
   min-height: 100%;
-
 }
 
 .popup-metric-title {
@@ -547,21 +490,12 @@ header nav {
   text-align: center;
   color: var(--Dark);
   justify-self: start;
-
-
-  @media (max-width: 900px) {
-    line-height: 15px;
-  }
 }
 
 .popup-metric-image {
   height: 75px;
   align-self: center;
   justify-self: center;
-
-  @media (max-width: 900px) {
-    max-height: 30px;
-  }
 }
 
 .popup-metric-value {
@@ -571,10 +505,6 @@ header nav {
   text-align: center;
   color: var(--Dark);
   justify-self: end;
-
-  @media (max-width: 900px) {
-    line-height: 15px;
-  }
 }
 
 .popup-container-partneri {
@@ -586,10 +516,6 @@ header nav {
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
-
-  @media (max-width: 900px) {
-    line-height: 15px;
-  }
 }
 
 .popup-partner {
@@ -597,11 +523,6 @@ header nav {
   font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
-
-  @media (max-width: 900px) {
-    line-height: 15px;
-    margin-bottom: 5px;
-  }
 }
 
 .popup-partner b {
@@ -615,23 +536,16 @@ header nav {
   border-color: transparent;
   width: fit-content;
   color: white;
-
   padding: 1.25%;
   font-size: var(--h3-font-size);
   border-radius: 10px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-
-  @media (max-width: 900px) {
-    margin-bottom: 4%;
-  }
 }
 
 .popup-button-procitaj-vise:hover {
   cursor: pointer;
   opacity: 0.75;
 }
-
-/* --------------------------------------------------- */
 
 #zahvalnost-section {
   display: flex;
@@ -646,18 +560,12 @@ header nav {
   line-height: 30px;
   text-align: justify;
   color: rgba(8, 34, 52, 0.8);
-
-  @media (max-width: 900px) {
-    font-size: 15px;
-    line-height: 24px;
-  }
 }
 
 #zahvalnost-section b {
   color: var(--Light);
 }
 
-/* --------------------------------------------------- */
 
 #pertneri-section {
   display: flex;
@@ -674,24 +582,13 @@ header nav {
   margin-top: 16px;
   column-gap: 80px;
   row-gap: 70px;
-
-  @media (max-width: 900px) {
-    column-gap: 30px;
-    row-gap: 50px;
-  }
 }
 
 .partneri-img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-
   max-width: 200px;
   max-height: 100px;
-
-  @media (max-width: 900px) {
-    max-width: 100px;
-    max-height: 50px;
-  }
 }
 
 .partneri-img:hover {
@@ -699,12 +596,8 @@ header nav {
   filter: grayscale(0%);
 }
 
-/* --------------------------------------------------- */
-
 footer {
   margin-top: 40px;
-
-
 }
 
 .section-1 {
@@ -714,29 +607,16 @@ footer {
   padding-right: 48px;
   padding-bottom: 32px;
 
-  @media (max-width: 900px) {
-    flex-direction: column;
-
-    padding: 0;
-    margin-bottom: 40px;
-    row-gap: 40px;
-  }
-
 }
 
 .icon-irc {
   width: 240px;
   height: 72px;
+}
 
-  @media (max-width: 900px) {
-    width: 180px;
-    height: auto;
-  }
-
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-  }
+.icon-irc:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .social-icons {
@@ -745,16 +625,10 @@ footer {
   justify-content: space-between;
 }
 
-
 .social-icons img {
   width: 30px;
   height: 30px;
   margin: 0 16px;
-
-  @media (max-width: 900px) {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .social-icons img:hover {
@@ -770,13 +644,7 @@ footer p {
   margin-top: 18px;
   margin-bottom: 18px;
   color: var(--Dark);
-
-  @media (max-width: 900px) {
-    font-size: 12.8px;
-  }
 }
-
-/* --------------------------------------------------- */
 
 @keyframes pop {
   50% {
